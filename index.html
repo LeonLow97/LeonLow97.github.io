@@ -5,37 +5,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="light.css" />
-  <link rel="stylesheet" href="dark.css" />
-  <link rel="stylesheet" href="toggle.css" />
-  <title>Jie Wei</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio</title>
 </head>
 
 <body>
   <nav>
     <div class="nav-bar">
-      <div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+      <div class="logo"><a href="#">Low Jie Wei</a></div>
+      <ul class="links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="toggle-btn">
+        <i class="fa-solid fa-bars"></i>
       </div>
+    </div>
 
-      <label class="switch">
+    <div class="dropdown-menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </div>
+
+    <!-- <label class="switch">
         <input type="checkbox">
         <span class="slider round"></span>
-      </label>
-    </div>
+      </label> -->
   </nav>
-
-  <!-- <header>
-    <section>
-      <h1>Low Jie Wei</h1>
-      <h2>About</h2>
-      <p></p>
-    </section>
-  </header> -->
 </body>
 
 </html>
