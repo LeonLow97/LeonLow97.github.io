@@ -2,45 +2,147 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Test</title>
 </head>
 
 <body>
-  <nav>
-    <div class="nav-bar">
-      <div class="logo"><a href="#">Low Jie Wei</a></div>
-      <ul class="links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="toggle-btn">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-    </div>
+    <nav class="navbar_container">
+        <div class="navbar_logo">Leon</div>
+        <ul class="navbar_list">
+            <li><a href="#about" class="active">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="dropdown-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </div>
+    <section id="about" class="main_container">
+        <h1 class="main_container_title">About</h1>
+        <p class="about_content">
+            Hello there! I'm a passionate and self-taught software engineer, having graduated from NUS (National
+            University of Singapore) as a Chemical Engineer. Currently, I thrive as a fullstack software engineer at ST
+            Engineering. My love for technology has led me to explore full-stack development, and I thoroughly enjoy
+            every aspect of it. As a person, I value leadership, effective communication, and possess a resilient and
+            independent spirit. I'm constantly seeking new challenges and opportunities to grow, always driven by my
+            curiosity and determination to create meaningful solutions through code. Now that you know more about me,
+            please don't hesitate to check out the rest of the sections!
+        </p>
+        <div class="skills">Skills</div>
+        <ul class="skills_list">
+            <li>Golang</li>
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>JavaScript</li>
+            <li>Node</li>
+            <li>React</li>
+            <li>Vue</li>
+            <li>Svelte</li>
+            <li>TypeScript</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>Git</li>
+            <li>GitLab</li>
+            <li>MS SQL</li>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>Docker</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </section>
 
-    <!-- <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label> -->
-  </nav>
+    <section id="experience" class="main_container">
+        <h1 class="main_container_title">Experience</h1>
+        <div class="experience_container">
+            <div class="experience_sub_container">
+                <h1 class="experience_company">ST Engineering</h1>
+                <div class="experience_role">Software Engineer (Fullstack)</div>
+                <ul class="experience_list">
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                </ul>
+            </div>
+
+            <div class="experience_sub_container">
+                <h1 class="experience_company">ST Engineering (Digital Academy)</h1>
+                <div class="experience_role">Software Engineer (Fullstack)</div>
+                <ul class="experience_list">
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                </ul>
+            </div>
+
+            <div class="experience_sub_container">
+                <h1 class="experience_company">Sembcorp Industries</h1>
+                <div class="experience_role">Research and Technology Analyst</div>
+                <ul class="experience_list">
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                    <li>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                        opposed to using 'Content here, content here', making it look like readable English.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="main_container">
+        <h1 class="main_container_title">Projects</h1>
+        <div class="cards">
+            <div class="card">
+                <div class="card_header">Mobile Wallet Provider</div>
+                <div class="card_tech_stack">VueJS, Golang, PostgreSQL, Docker</div>
+                <p class="card_description">[Text]</p>
+                <button class="card_modal_button">Learn More</button>
+            </div>
+
+            <div class="card">
+                <div class="card_header">Inventory Management System</div>
+                <div class="card_tech_stack">React, Golang, PostgreSQL, Docker</div>
+                <p class="card_description">For managing my online business</p>
+                <button class="card_modal_button">Learn More</button>
+            </div>
+
+            <div class="card">
+                <div class="card_header">Stock Market Broker REST API</div>
+                <div class="card_tech_stack">Java SpringBoot, PostgreSQL, Docker</div>
+                <p class="card_description">[Text]</p>
+                <button class="card_modal_button">Learn More</button>
+            </div>
+
+            <div class="card">
+                <div class="card_header">Task Management System</div>
+                <div class="card_tech_stack">ReactJS, NodeJS, MySQL, Docker</div>
+                <p class="card_description">[Text]</p>
+                <button class="card_modal_button">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="main_container">
+        <h1 class="main_container_title">Contact</h1>
+        <p class="contact_description">Contact me at <span class="contact_email">lowjiewei@gmail.com</span> to keep in
+            touch!</p>
+        <div class="contact_list_container">
+            <ul class="contact_details">
+                <li>LinkedIn</li>
+                <li>GitHub</li>
+                <li>Carousell</li>
+            </ul>
+        </div>
+    </section>
 </body>
 
 </html>
