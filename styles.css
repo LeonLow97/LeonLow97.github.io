@@ -45,7 +45,7 @@ body {
     background-color: #000;
     text-decoration: none;
     margin-left: 10%;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 
 .navbar_list {
@@ -60,7 +60,7 @@ body {
 }
 
 .navbar_list li {
-    padding: 10px;
+    padding: 17px;
     cursor: pointer;
     margin-left: 30px;
 }
@@ -254,7 +254,7 @@ body {
 .contact_details li a:hover {
     background-color: #000;
     color: #fff;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 
 .contact_details li:first-child {
