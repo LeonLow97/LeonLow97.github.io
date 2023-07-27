@@ -10,9 +10,9 @@ body {
 
 /* NAVBAR */
 .navbar_container {
-    background-color: #333;
+    background-color: #e5e7eb;
     /* Change this to the desired background color */
-    color: #fff;
+    color: #444;
     /* Change this to the desired text color */
     position: fixed;
     top: 0;
@@ -25,6 +25,7 @@ body {
 }
 
 .navbar_logo {
+    margin-left: 10%;
     font-size: 20px;
     font-family: cursive;
     font-weight: bold;
@@ -32,13 +33,14 @@ body {
 }
 
 .navbar_list {
+    margin-right: 10%;
     list-style: none;
     display: flex;
 }
 
 .navbar_list li {
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 .navbar_list li:first-child {
@@ -47,18 +49,18 @@ body {
 
 .navbar_list a {
     text-decoration: none;
-    color: #fff;
+    color: #444;
     transition: color 0.3s ease;
 }
 
 .navbar_list li:hover {
-    color: #555;
+    color: red;
     transition: color 0.3s ease;
 }
 
 /* SECTION Container and Title */
 .main_container {
-    margin: 100px 10% 0px 10%;
+    margin: 100px 10% 100px 10%;
 }
 
 .main_container_title {
@@ -148,6 +150,7 @@ body {
 
 /* PROJECTS */
 .cards {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -183,6 +186,7 @@ body {
 
 /* CONTACT */
 .contact_description {
+    margin-top: 40px;
     text-align: center;
 }
 
@@ -195,7 +199,7 @@ body {
 }
 
 .contact_details {
-    margin-top: 15px;
+    margin-top: 30px;
     display: inline-block;
     text-align: left;
 }
@@ -204,6 +208,18 @@ body {
     list-style: none;
     display: inline-block;
     margin-left: 10px;
+}
+
+.contact_details li a {
+    text-decoration: none;
+    color: #444;
+    background-color: #ffde79;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.contact details li a:hover {
+    background-color: red;
 }
 
 .contact_details li:first-child {
