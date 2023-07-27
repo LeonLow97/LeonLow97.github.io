@@ -54,6 +54,11 @@ body {
     display: flex;
 }
 
+.navbar_list a {
+    text-decoration: none;
+    color: #444;
+}
+
 .navbar_list li {
     padding: 10px;
     cursor: pointer;
@@ -67,12 +72,6 @@ body {
 .navbar_list li:hover {
     color: #fff;
     background-color: #000;
-}
-
-.navbar_list a {
-    text-decoration: none;
-    color: #444;
-    transition: color 2s ease;
 }
 
 .navbar_list li:hover {
@@ -135,7 +134,7 @@ body {
 }
 
 .experience_sub_container:nth-child(odd) {
-    background-color: beige;
+    background-color: #f5f5dc;
 }
 
 .experience_sub_container:nth-child(even) {
@@ -156,13 +155,13 @@ body {
     width: 40%;
 }
 
-.experience_role:nth-child(odd) {
+/* .experience_role:nth-child(odd) {
     background-color: #ffde79;
 }
 
 .experience_role:nth-child(even) {
     background-color: beige;
-}
+} */
 
 .experience_list {
     text-decoration: none;
@@ -252,8 +251,10 @@ body {
     padding: 10px;
 }
 
-.contact details li a:hover {
-    background-color: red;
+.contact_details li a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: color 0.5s ease;
 }
 
 .contact_details li:first-child {
