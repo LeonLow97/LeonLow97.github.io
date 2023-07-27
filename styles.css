@@ -116,13 +116,19 @@ body {
     /* Changed to 80% */
 }
 
+.skills_icon {
+    width: 17px;
+    height: 17px;
+    max-width: 100%;
+    margin-right: 15px;
+}
+
 .skills_list li {
     background-color: #ffde79;
     padding: 12px 15px;
     border-radius: 10px;
     /* 3 items per row with 20px spacing */
     width: calc(20% - 20px);
-    text-align: center;
     margin: 5px 10px;
 }
 
@@ -150,18 +156,15 @@ body {
 
 .experience_role {
     border-radius: 10px;
-    padding: 10px;
+    padding: 7px;
     margin-bottom: 10px;
+    margin-left: 10px;
+    /* font-weight: bold; */
+    /* font-style: italic; */
     width: 40%;
+    background-color: mediumseagreen;
+    color: white;
 }
-
-/* .experience_role:nth-child(odd) {
-    background-color: #ffde79;
-}
-
-.experience_role:nth-child(even) {
-    background-color: beige;
-} */
 
 .experience_list {
     text-decoration: none;
