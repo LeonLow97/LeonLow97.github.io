@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 .navbar_logo {
@@ -94,6 +95,51 @@ body {
     font-family: cursive;
 }
 
+/* PHOTO */
+/* Set the background photo to display only on the first section */
+.background_photo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Make it fit the browser screen perfectly */
+    overflow: hidden;
+    /* Hide any overflowing content */
+    backdrop-filter: blur(60px);
+}
+
+/* Center the circular photo frame */
+.photo_frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Place the photo frame above the background */
+}
+
+/* Make the photo circular */
+.circular_frame {
+    border-radius: 50%;
+    /* Add any additional styles you want for the circular frame */
+}
+
+/* Resize the background photo to fit without being zoomed in */
+.background_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Resize the circular photo frame image */
+.photo_frame .circular_frame {
+    max-width: 300px;
+    /* Adjust this value to your desired size */
+    max-height: 300px;
+    /* Adjust this value to your desired size */
+    border: 5px solid #ffde79;
+}
+
 /* ABOUT SECTION */
 .about_content {
     margin-top: 20px;
@@ -130,33 +176,35 @@ body {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 100%;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
 }
 
 .skills_list li {
     background-color: #ffde79;
     padding: 12px 15px;
     border-radius: 10px;
-    flex-basis: calc(20% - 20px);
-    margin: 5px 10px;
-    box-sizing: border-box;
+    width: 15%;
+    /* flex-basis: calc(20% - 20px); */
+    margin: 5px 0px;
+    /* box-sizing: border-box; */
 }
 
 /* Pseudo-element for filling the remaining space in the last row */
-.skills_list::after {
+/* .skills_list::after {
     content: "";
     flex: auto;
 }
 
 /* To handle the last row items specifically */
-.skills_list li:last-child:nth-last-child(-n+4),
+/* .skills_list li:last-child:nth-last-child(-n+4),
 .skills_list li:last-child:nth-last-child(-n+3),
 .skills_list li:last-child:nth-last-child(-n+2),
 .skills_list li:last-child:nth-last-child(-n+1) {
     margin-right: auto;
-}
+}  */
 
 /* Adjust the number of items per row based on the container width */
 @media (max-width: 1200px) {
