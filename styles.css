@@ -24,51 +24,6 @@ body {
     z-index: 10;
 }
 
-/* Responsive styles for the navbar */
-@media screen and (max-width: 768px) {
-    .navbar_container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .navbar_logo_link {
-        margin: 0;
-        /* Remove margin for mobile */
-        margin-bottom: 10px;
-        /* Add some spacing below the logo for mobile */
-    }
-
-    .navbar_list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .navbar_list li {
-        padding: 10px;
-    }
-
-    .navbar_list li:first-child {
-        margin-top: 10px;
-        /* Add some spacing above the first list item for mobile */
-    }
-
-    /* Show the hamburger menu icon for mobile */
-    .navbar_list {
-        display: none;
-        /* Hide the list items by default on mobile */
-    }
-
-    .navbar_list.show {
-        display: flex;
-        /* Show the list items when the menu is active */
-    }
-}
-
 .navbar_logo {
     font-size: 20px;
     font-family: cursive;
@@ -154,8 +109,9 @@ body {
     height: 100vh;
     /* Make it fit the browser screen perfectly */
     overflow: hidden;
-    /* Hide any overflowing content */
-    backdrop-filter: blur(60px);
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
 }
 
 /* Center the circular photo frame */
@@ -317,7 +273,6 @@ body {
     margin-left: 10px;
     /* font-weight: bold; */
     /* font-style: italic; */
-    width: 40%;
     background-color: mediumseagreen;
     color: white;
 }
