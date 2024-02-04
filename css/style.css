@@ -153,32 +153,58 @@ body {
 
 .about-text-box {
   grid-column: 2 / -1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-description {
   font-size: 1.8rem;
   line-height: 1.4;
-  margin-bottom: 2rem;
 }
 
-.about-skills-list {
+/* About section mini nav bar */
+.about-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+
+.about-nav-link:link,
+.about-nav-link:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.about-nav-link:hover,
+.about-nav-link:active,
+.about-nav-link.active {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  color: #5f3dc4;
+}
+
+.about-skills-list,
+.about-education-list {
   list-style: none;
   font-size: 1.8rem;
+  display: none;
+}
 
+.open .about-skills-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2.4rem;
   height: 100%;
 }
 
-.about-nav-education {
-  display: none;
-}
-
-.about-education-list {
-  list-style: none;
-  font-size: 1.8rem;
-
+.open .about-education-list {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -186,12 +212,4 @@ body {
 
 .academic-icon {
   width: 1.8rem;
-}
-
-/********************************/
-/* EXPERIENCE SECTION */
-/********************************/
-.section-experience {
-  height: 100vh;
-  padding-top: 6.2rem;
 }
