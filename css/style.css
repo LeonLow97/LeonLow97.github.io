@@ -213,3 +213,63 @@ body {
 .academic-icon {
   width: 1.8rem;
 }
+
+/********************************/
+/* PROJECTS SECTION */
+/********************************/
+.section-projects {
+  height: 100vh;
+  padding-top: 6.2rem;
+}
+
+.project {
+  background-color: #f3f0ff;
+  border-radius: 0.9rem;
+  padding: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  cursor: default;
+}
+
+.project:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.15);
+
+  background-color: #e5dbff;
+}
+
+.project-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.project-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #432b89;
+}
+
+.project-description {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+.project-link:link,
+.project-link:visited {
+  text-decoration: none;
+  color: #432b89;
+  font-size: 1.8rem;
+
+  margin-top: auto;
+}
+
+.project-link:hover,
+.project-link:active {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  cursor: pointer;
+}
