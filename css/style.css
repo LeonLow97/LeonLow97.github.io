@@ -225,12 +225,12 @@ body {
 
 .experience-timeline {
   margin: 0 auto;
-  max-width: 46rem;
+  max-width: 60rem;
 }
 
 .experience-checkpoint {
   position: relative;
-  max-width: 46rem;
+  /* max-width: 70rem; */
   /* background-color: orange; */
 
   /* padding-bottom: 14rem; */
@@ -293,13 +293,13 @@ body {
 .experience-checkpoint:nth-child(odd) {
   border-left: 0.3rem solid #5f3dc4;
   padding-left: 2.4rem;
-  transform: translateX(22.8rem);
+  transform: translateX(29.9rem);
 }
 
 .experience-checkpoint:nth-child(even) {
   border-right: 0.3rem solid #5f3dc4;
   padding-right: 2.4rem;
-  transform: translateX(-22.9rem);
+  transform: translateX(-29.8rem);
 }
 
 /* Horizontal connector */
@@ -403,3 +403,12 @@ body {
   text-underline-offset: 1rem;
   cursor: pointer;
 }
+
+/********************************/
+/* CONTACTS SECTION */
+/********************************/
+.section-contact {
+  height: 100vh;
+  padding-top: 6.2rem;
+}
+
