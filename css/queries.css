@@ -1,0 +1,162 @@
+/**************************/
+/* Below 1400px */
+/* 1400px / 16px = 87.5em */
+/**************************/
+@media (max-width: 87em) {
+    .home,
+    .about {
+        max-width: 120rem;
+    }
+}
+
+/**************************/
+/* Below 1300px */
+/* 1300px / 16px = 81.25em */
+/**************************/
+@media (max-width: 81em) {
+    .section-about {
+        height: 80rem;
+    }
+
+    .experience-timeline {
+        max-width: 50rem;
+    }
+
+    .experience-checkpoint:nth-child(odd) {
+        transform: translateX(24.8rem);
+    }
+
+    .experience-checkpoint:nth-child(even) {
+        transform: translateX(-24.9rem);
+    }
+
+    .section-projects {
+        height: 85rem;
+    }
+
+    .section-contact {
+        height: 80rem;
+    }
+}
+
+/**************************/
+/* Below 1250px */
+/* 1250px / 16px = 78.125em */
+/**************************/
+@media (max-width: 78em) {
+
+    .home,
+    .about {
+        max-width: 110rem;
+    }
+
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2.4rem;
+        width: 80%;
+    }
+}
+
+/**************************/
+/* Below 1130px */
+/* 1130px / 16px = 70.62em */
+/**************************/
+@media (max-width: 70.5em) {
+    .home {
+        height: 90%;
+    }
+
+    .home,
+    .about {
+        max-width: 100rem;
+    }
+
+    .section-contact {
+        padding-top: 9.6rem;
+    }
+
+    .contact-container {
+        width: 85rem;
+    }
+}
+
+/**************************/
+/* Below 1000px */
+/* 1000px / 16px = 62.5em */
+/**************************/
+@media (max-width: 63em) {
+    .container-headings {
+        padding-bottom: 1.4rem;
+    }
+
+    .home,
+    .about {
+        max-width: 90rem;
+    }
+
+    .section-home {
+        height: 80%;
+        padding-bottom: 4.4rem;
+    }
+
+    .heading-primary {
+        font-size: 4.4rem;
+    }
+
+    .heading-secondary {
+        font-size: 3.2rem;
+    }
+
+    .home-description {
+        font-size: 1.8rem;
+    }
+
+    .btn:link,
+    .btn:visited {
+        padding: 1.2rem 2.4rem;
+    }
+
+    .section-about {
+        height: 80%;
+        padding-bottom: 7.2rem;
+    }
+
+    .about-skills-list,
+    .about-education-list,
+    .about-description {
+        font-size: 1.6rem;
+    }
+
+    .about-nav-list {
+        margin-bottom: 2.6rem;
+    }
+
+    .about-nav-link:link {
+        font-size: 1.8rem;
+    }
+
+    .open .about-skills-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid {
+        column-gap: 6rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 1.6rem;
+    }
+
+    .contact-details h3 {
+        font-size: 2.2rem;
+    }
+
+    .contact-details {
+        font-size: 1.8rem
+    }
+
+    .contact-icons {
+        font-size: 3.6rem;
+    }
+}
