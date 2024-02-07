@@ -62,6 +62,7 @@
   padding-bottom: 6.2rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   font-size: 2rem;
@@ -70,6 +71,11 @@
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 0.9rem;
+
+  /* only required for <button> element */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   transition: all 0.3s ease;
 }
@@ -84,6 +90,19 @@
 .btn--full:active {
   background-color: #432b89;
   color: #fff;
+}
+
+.btn--form {
+  background-color: #432b89;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .btn--outline:link,
