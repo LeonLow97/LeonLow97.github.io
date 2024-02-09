@@ -78,8 +78,6 @@
     }
 
     /* EXPERIENCE TIMELINE */
-    .experience-timeline {}
-
     .experience-checkpoint:nth-child(even) {
         border-right: none;
         transform: translateX(0);
@@ -237,7 +235,6 @@
 /* 900px / 16px = 56.25em */
 /**************************/
 @media (max-width: 56.5em) {
-
     .grid--3-cols,
     .grid--2-cols {
         grid-template-columns: 1fr;
@@ -259,13 +256,17 @@
     }
 
     .section-about {
-        height: 110rem;
+        height: 105rem;
     }
 
     .about {
         column-gap: 0rem;
         row-gap: 1.4rem;
         text-align: center;
+    }
+
+    .about-header {
+        display: none;
     }
 
     .about-text-box {
@@ -284,7 +285,7 @@
     }
 
     .projects {
-        width: 60%;
+        width: 75%;
     }
 
     .section-contact {
@@ -317,7 +318,11 @@
     }
 
     .contact-details h3 {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
+    }
+
+    .contact-details p {
+        font-size: 1.8rem;
     }
 
     .contact-icons {
@@ -332,6 +337,30 @@
 /**************************/
 @media (max-width: 40.7em) {
     .section-about {
-        height: 75rem;
+        height: 100rem;
+    }
+
+    .about {
+        max-width: 80rem;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        font-size: 1.8rem;
+    }
+}
+
+/**************************/
+/* Below 550px */
+/* 550px / 16px = 34.375em */
+/**************************/
+@media (max-width: 35em) {
+    .experience-timeline {
+        max-width: 70%;
+    }
+
+    .contact-container {
+        width: 70%;
     }
 }
