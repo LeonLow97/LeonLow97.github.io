@@ -91,6 +91,10 @@ body {
   color: #333;
 }
 
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /********************************/
 /* NAVIGATION */
 /********************************/

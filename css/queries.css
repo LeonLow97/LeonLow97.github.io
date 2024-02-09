@@ -78,16 +78,33 @@
     }
 
     /* EXPERIENCE TIMELINE */
+    .experience-checkpoint {
+        padding-bottom: 1.4rem;
+    }
+
     .experience-checkpoint:nth-child(even) {
         border-right: none;
         transform: translateX(0);
-        padding-left: 0;
+        padding-right: 0;
     }
 
     .experience-checkpoint:nth-child(odd) {
         border-left: none;
         transform: translateX(0);
-        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* Horizontal connector */
+    .experience-checkpoint:nth-child(odd)::before,
+    .experience-checkpoint:nth-child(even)::before {
+        width: 0;
+        height: 0;
+    }
+
+    /* Circle in checkpoint */
+    .experience-checkpoint:nth-child(odd) div::before,
+    .experience-checkpoint:nth-child(even) div::before {
+        display: none;
     }
 
     .section-contact {
@@ -105,13 +122,13 @@
 /**************************/
 @media (max-width: 60em) {
 
-    /* Mobile Nav */
+    /* Mobile Navigation */
     .btn-mobile-nav {
         display: block;
     }
 
     .main-nav {
-        background-color: rgba(248, 240, 252, 0.8);
+        background-color: rgba(248, 240, 252, 0.90);
         position: absolute;
         top: 0;
         left: 0;
@@ -125,18 +142,13 @@
         transition: all 0.5s ease-in;
 
         /* 1) Hide it visually */
-        opacity: 1;
+        opacity: 0;
 
         /* 2) Make it unaccessible to mouse and keyboard */
         pointer-events: none;
 
         /* 3) Hide it from screen readers */
         visibility: hidden;
-    }
-
-    .main-nav-list {
-        flex-direction: column;
-        gap: 4.8rem;
     }
 
     .nav-open .main-nav {
@@ -152,6 +164,16 @@
 
     .nav-open .icon-mobile-nav[name='menu-outline'] {
         display: none;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .main-nav-list:link,
+    .main-nav-list:visited {
+        font-size: 3rem;
     }
 
     .container-headings {
@@ -235,6 +257,7 @@
 /* 900px / 16px = 56.25em */
 /**************************/
 @media (max-width: 56.5em) {
+
     .grid--3-cols,
     .grid--2-cols {
         grid-template-columns: 1fr;
@@ -356,11 +379,39 @@
 /* 550px / 16px = 34.375em */
 /**************************/
 @media (max-width: 35em) {
+    .logo {
+        height: 20rem;
+    }
+
+    .heading-primary,
+    .heading-secondary {
+        font-size: 2.8rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+    }
+
     .experience-timeline {
-        max-width: 70%;
+        width: 90%;
     }
 
     .contact-container {
-        width: 70%;
+        width: 90%;
+    }
+
+    .projects {
+        width: 100%;
+    }
+}
+
+/**************************/
+/* Below 350px */
+/* 350px / 16px = 21.875em */
+/**************************/
+@media (max-width: 22em) {
+    .section-about {
+        height: 105rem;
     }
 }
