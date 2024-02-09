@@ -123,18 +123,26 @@
 @media (max-width: 60em) {
 
     /* Mobile Navigation */
+    .header {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
     .btn-mobile-nav {
         display: block;
+        z-index: 1000;
     }
 
     .main-nav {
-        background-color: rgba(248, 240, 252, 0.90);
+        background-color: rgba(248, 240, 252, 0.95);
+
+        /* .header is the parent with position: relative */
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100vh;
-        /* transform: translateX(100%); */
+        transform: translateX(100%);
 
         display: flex;
         align-items: center;
@@ -390,7 +398,9 @@
 
     .header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-left: 1.6rem;
+        padding-right: 3.2rem;
     }
 
     .experience-timeline {
