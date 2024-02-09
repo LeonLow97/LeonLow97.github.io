@@ -84,6 +84,33 @@
     .contact-container {
         width: 85rem;
     }
+
+    /* experience timeline component */
+    .experience-timeline {
+        width: 80vw;
+    }
+
+    .experience-timeline .experience-checkpoint {
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+    }
+
+    .timeline .checkpoint::before {
+        width: 3px;
+        height: 4rem;
+        top: -20rem;
+        left: 100%;
+        transform: translateX(-70%);
+    }
+
+    .timeline .checkpoint div::before {
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /**************************/
@@ -91,6 +118,7 @@
 /* 950px / 16px = 59.375em */
 /**************************/
 @media (max-width: 60em) {
+
     /* Mobile Nav */
     .btn-mobile-nav {
         display: block;
@@ -221,8 +249,25 @@
 /* 900px / 16px = 56.25em */
 /**************************/
 @media (max-width: 56.5em) {
-    .grid--3-cols {
+
+    .grid--3-cols,
+    .grid--2-cols {
         grid-template-columns: 1fr;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        padding-top: 2.4rem;
+        gap: 1.4rem;
+    }
+
+    .home-text,
+    .home-img-box {
+        text-align: center;
+    }
+
+    .home-img {
+        width: 60%;
     }
 
     .section-about {
@@ -233,7 +278,19 @@
         height: 75%;
     }
 
+    .contact-container {
+        width: 70%;
+    }
+
     .projects {
         width: 60%;
+    }
+
+    .contact-form {
+        grid-row: 1 / 1;
+    }
+
+    .contact-details {
+        gap: 0;
     }
 }
