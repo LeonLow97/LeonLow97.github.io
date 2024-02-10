@@ -64,6 +64,37 @@ allLinks.forEach(function (link) {
 });
 
 ///////////////////////////////////////////////////////////
+// Email with prefilled content
+const contactForm = document.querySelector('.contact-form');
+contactForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  let message = document.getElementById('message').value;
+
+  let subject = 'Portfolio Website Contact Form Submission';
+  let body =
+    'Name: ' +
+    name +
+    '\n\n' +
+    'Email: ' +
+    email +
+    '\n\n' +
+    'Message: ' +
+    message;
+  let mailtoLink =
+    'mailto:lowjiewei@gmail.com' +
+    '?subject=' +
+    encodeURIComponent(subject) +
+    '&body=' +
+    encodeURIComponent(body);
+
+  // open default email client with pre-filled email
+  window.location.href = mailtoLink;
+});
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement('div');
