@@ -159,7 +159,6 @@ Default: 9px;
 .about-img {
   width: 100%;
   border: none;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border: 5px solid;
   border-image: linear-gradient(to right, #9b59b6, #3498db);

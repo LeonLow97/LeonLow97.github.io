@@ -430,9 +430,8 @@
     }
 
     .section-about {
-        height: 155rem;
+        height: 150rem;
     }
-
 
     .open .about-skills-list {
         grid-template-columns: repeat(2, 1fr);
