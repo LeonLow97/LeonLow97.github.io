@@ -130,7 +130,12 @@ Default: 9px;
 }
 
 .home-img {
-  width: 100%;
+  width: 50%;
+}
+
+.home-img-box {
+  display: flex;
+  justify-content: center;
 }
 
 /********************************/
@@ -141,6 +146,10 @@ Default: 9px;
   padding-top: 6.2rem;
 }
 
+.about-container {
+  padding-bottom: 0;
+}
+
 .about {
   max-width: 130rem;
   margin: 0 auto;
@@ -149,6 +158,12 @@ Default: 9px;
 
 .about-img {
   width: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 5px solid;
+  border-image: linear-gradient(to right, #9b59b6, #3498db);
+  border-image-slice: 1;
 }
 
 .about-text-box {
@@ -168,9 +183,9 @@ Default: 9px;
 .about-nav-list {
   list-style: none;
   display: flex;
-  gap: 2.2rem;
+  gap: 3.2rem;
   justify-content: center;
-  margin-bottom: 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .about-nav-link:link,
@@ -210,6 +225,28 @@ Default: 9px;
   gap: 1.2rem;
 }
 
+.skills-img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.skills-img.grpc {
+  filter: brightness(0%);
+  width: 4rem;
+}
+
+.about-skills-list--item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  color: #432b89;
+
+  background-color: #f3f0ff;
+  border-radius: 1.6rem;
+  padding: 0.5rem;
+}
+
 .academic-icon {
   width: 1.8rem;
 }
@@ -236,10 +273,18 @@ Default: 9px;
   /* padding-bottom: 14rem; */
 }
 
-.experience--company-name {
+.experience-company--name {
   font-size: 2.4rem;
   font-weight: 500;
   padding-bottom: 1.2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience-company--image {
+  height: 2rem;
 }
 
 .experience-role {
