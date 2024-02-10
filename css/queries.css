@@ -295,7 +295,7 @@
     }
 
     .section-about {
-        height: 115rem;
+        height: 135rem;
     }
 
     .about {
@@ -315,7 +315,7 @@
     .about-img-box {
         grid-column: 2 / -1;
         padding-top: 3.2rem;
-        width: 30%;
+        width: 40%;
 
         justify-self: center;
     }
@@ -372,16 +372,34 @@
 }
 
 /**************************/
+/* Below 750px */
+/* 750px / 16px = 46.875em */
+/**************************/
+@media (max-width: 47em) {
+    .section-about {
+        height: 140rem;
+    }
+
+    .about-img-box {
+        width: 50%;
+    }
+}
+
+/**************************/
 /* Below 650px */
 /* 650px / 16px = 40.625em */
 /**************************/
 @media (max-width: 40.7em) {
     .section-about {
-        height: 115rem;
+        height: 145rem;
     }
 
     .about {
         max-width: 80rem;
+    }
+
+    .about-img-box {
+        width: 60%;
     }
 
     .btn,
@@ -412,8 +430,9 @@
     }
 
     .section-about {
-        height: 130rem;
+        height: 155rem;
     }
+
 
     .open .about-skills-list {
         grid-template-columns: repeat(2, 1fr);
@@ -438,11 +457,15 @@
 /**************************/
 @media (max-width: 23em) {
     .section-about {
-        height: 135rem;
+        height: 165rem;
     }
 
     .experience-company--name span {
         font-size: 2rem;
+    }
+
+    .about-img-box {
+        width: 90%;
     }
 }
 
@@ -458,7 +481,7 @@
     }
 
     .section-about {
-        height: 125rem;
+        height: 150rem;
     }
 
     .heading-primary,
