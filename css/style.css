@@ -400,6 +400,7 @@ Default: 9px;
   background-color: #f3f0ff;
   border-radius: 0.9rem;
   padding: 3.2rem;
+  margin-top: 4.8rem;
 
   display: flex;
   flex-direction: column;
@@ -524,6 +525,12 @@ Default: 9px;
 
 .contact-details p {
   font-size: 2rem;
+}
+
+.contact-details-icons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .contact-icons {
