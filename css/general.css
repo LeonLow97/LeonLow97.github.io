@@ -1,6 +1,27 @@
-/********************************/
-/* GENERAL */
-/********************************/
+:root {
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Cormorant Garamond', serif;
+  --sticky-header-offset: 11.2rem;
+  --color-text: #38261b;
+  --color-text-soft: #776354;
+  --color-heading: #24150d;
+  --color-primary-50: #fbf6f1;
+  --color-primary-100: #efe1d2;
+  --color-primary-200: #ddc1a3;
+  --color-primary-300: #c69772;
+  --color-primary-500: #8b5a3c;
+  --color-primary-600: #70442a;
+  --color-primary-700: #542f1b;
+  --color-surface: rgba(255, 248, 242, 0.8);
+  --color-surface-strong: rgba(255, 250, 246, 0.94);
+  --color-border: rgba(112, 68, 42, 0.16);
+  --shadow-soft: 0 2rem 5rem rgba(54, 32, 20, 0.1);
+  --shadow-card: 0 1.6rem 4rem rgba(48, 28, 18, 0.14);
+  --radius-xl: 3.2rem;
+  --radius-lg: 2.4rem;
+  --radius-md: 1.6rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,17 +31,69 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--sticky-header-offset);
   overflow-x: hidden;
 }
 
 body {
-  font-family: 'Rubik', sans-serif;
-  line-height: 1;
+  position: relative;
+  font-family: var(--font-body);
+  line-height: 1.6;
   font-weight: 400;
-  color: #333;
-
-  /* only works if there is nothing absolutely positioned in relation to body */
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at top left, rgba(198, 151, 114, 0.32), transparent 32%),
+    radial-gradient(circle at 85% 10%, rgba(221, 193, 163, 0.52), transparent 24%),
+    linear-gradient(180deg, #f9f3ee 0%, #f5ece4 48%, #efe2d6 100%);
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  width: 32rem;
+  height: 32rem;
+  left: -8rem;
+  top: 18rem;
+  background: rgba(198, 151, 114, 0.2);
+}
+
+body::after {
+  width: 28rem;
+  height: 28rem;
+  right: -8rem;
+  bottom: 8rem;
+  background: rgba(221, 193, 163, 0.24);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+main,
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background-color: var(--color-primary-200);
+  color: var(--color-heading);
 }
 
 /********************************/
@@ -28,21 +101,21 @@ body {
 /********************************/
 .container {
   max-width: 120rem;
-  padding: 0 3.2rem;
+  padding: 0 2.4rem;
   margin: 0 auto;
 }
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  gap: 3.2rem;
 }
 
 .grid--2-cols {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid--3-cols {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .text-center {
@@ -50,95 +123,110 @@ body {
 }
 
 .heading-primary,
-.heading-secondary {
+.heading-secondary,
+.heading-tertiary {
+  font-family: var(--font-heading);
   font-weight: 700;
-  color: #333;
+  letter-spacing: -0.03em;
+  color: var(--color-heading);
+  line-height: 0.98;
 }
 
 .heading-primary {
-  font-size: 5.2rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
+  font-size: clamp(5.2rem, 7vw, 8.6rem);
+  margin-bottom: 2.4rem;
 }
 
 .heading-secondary {
-  font-size: 4.4rem;
-  line-height: 1.05;
-  margin-bottom: 2.4rem;
+  font-size: clamp(4.2rem, 5vw, 6rem);
+  margin-bottom: 1.8rem;
 }
 
 .heading-tertiary {
-  font-size: 2rem;
-  line-height: 1.05;
-  margin-bottom: 2.4rem;
+  font-size: 3.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .subheading {
   display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #5f3dc4;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-primary-600);
   text-transform: uppercase;
   margin-bottom: 1.6rem;
-  letter-spacing: 0.75px;
+  letter-spacing: 0.24em;
+}
+
+.section-copy {
+  max-width: 66rem;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  line-height: 1.85;
+  color: var(--color-text-soft);
 }
 
 .btn,
 .btn:link,
 .btn:visited {
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-decoration: none;
-  display: inline-block;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 0.9rem;
-
-  /* only required for <button> element */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  min-width: 16rem;
+  padding: 1.55rem 2.8rem;
+  border-radius: 999px;
   border: none;
   cursor: pointer;
   font-family: inherit;
+  letter-spacing: 0.01em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease,
+    color 0.3s ease;
+}
 
-  transition: all 0.3s ease;
+.btn:hover,
+.btn:active {
+  transform: translateY(-2px);
 }
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #5f3dc4;
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
   color: #fff;
+  box-shadow: 0 1.6rem 3.2rem rgba(84, 47, 27, 0.24);
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #432b89;
-  color: #fff;
-}
-
-.btn--form {
-  background-color: #432b89;
-  color: #fdf2e9;
-  align-self: end;
-  padding: 1.2rem;
-  width: 100%;
-}
-
-.btn--form:hover {
-  background-color: #fff;
-  color: #555;
+  box-shadow: 0 1.8rem 3.6rem rgba(84, 47, 27, 0.28);
 }
 
 .btn--outline:link,
 .btn--outline:visited {
-  background-color: #f3f0ff;
-  color: #5f3dc4;
-  box-shadow: inset 0 0 0 2px #5f3dc4;
+  background:
+    linear-gradient(145deg, rgba(255, 252, 249, 0.92), rgba(251, 246, 241, 0.9));
+  color: var(--color-primary-700);
+  box-shadow: inset 0 0 0 1px rgba(112, 68, 42, 0.22), 0 1.2rem 2.6rem rgba(54, 32, 20, 0.08);
 }
 
 .btn--outline:hover,
 .btn--outline:active {
-  color: #9775fa;
-  box-shadow: inset 0 0 0 2px #9775fa;
+  background-color: rgba(239, 225, 210, 0.9);
+  box-shadow: inset 0 0 0 1px rgba(112, 68, 42, 0.36), 0 1.4rem 3rem rgba(54, 32, 20, 0.1);
 }
 
-.mr-sm {
-  margin-right: 1.6rem !important;
+.btn--form {
+  width: 100%;
+  background: linear-gradient(135deg, #7a4c30, #4f2d1b);
+  color: #fff;
+  box-shadow: 0 1.6rem 3.2rem rgba(79, 45, 27, 0.22);
+}
+
+.btn--form:hover,
+.btn--form:active {
+  background: linear-gradient(135deg, #8a5a3c, #5a3420);
+  color: #fff;
+  box-shadow: 0 1.9rem 3.6rem rgba(79, 45, 27, 0.28);
 }

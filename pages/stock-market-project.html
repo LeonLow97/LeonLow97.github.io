@@ -4,12 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Jie Wei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <script src="../js/theme.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <title>Stock Market Broker | Low Jie Wei</title>
 </head>
 
 <body>
-    <a href="../index.html">Back to Portfolio</a> <br>
-    Coming Soon...
+    <main class="project-page">
+        <section class="project-card">
+            <div class="project-toolbar">
+                <a class="project-back" href="../index.html">&larr; Back to Portfolio</a>
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    data-theme-toggle
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="sr-only">Toggle color theme</span>
+                    <span class="theme-toggle__track" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun"></span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon"></span>
+                        <span class="theme-toggle__thumb"></span>
+                    </span>
+                </button>
+            </div>
+            <span class="project-label">Java • Spring Boot • REST API</span>
+            <h1 class="project-title">Stock Market Broker</h1>
+            <p class="project-summary">A broker-style REST API focused on account workflows, market visibility, and
+                smoother order handling for stock trading interactions.</p>
+            <p class="project-status">This page is also being polished. I left it visually consistent with the new site
+                while keeping space for a proper technical walkthrough later.</p>
+            <div class="project-stack">
+                <span>REST APIs</span>
+                <span>Order Placement</span>
+                <span>Account Management</span>
+                <span>Market Insights</span>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

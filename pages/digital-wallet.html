@@ -4,12 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Low Jie Wei</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <script src="../js/theme.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="../css/project-page.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <title>Digital Wallet | Low Jie Wei</title>
 </head>
 
 <body>
-    <a href="../index.html">Back to Portfolio</a> <br>
-    Coming Soon...
+    <main class="project-page">
+        <section class="project-card">
+            <div class="project-toolbar">
+                <a class="project-back" href="../index.html">&larr; Back to Portfolio</a>
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    data-theme-toggle
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="sr-only">Toggle color theme</span>
+                    <span class="theme-toggle__track" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun"></span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon"></span>
+                        <span class="theme-toggle__thumb"></span>
+                    </span>
+                </button>
+            </div>
+            <span class="project-label">Go • React • Payments</span>
+            <h1 class="project-title">Digital Wallet</h1>
+            <p class="project-summary">A secure fullstack payment experience designed around storing funds, managing
+                balance, and handling transactions with a clean user flow.</p>
+            <p class="project-status">This case study page is being refreshed together with the portfolio redesign. A
+                fuller breakdown of the architecture, APIs, and decisions will be added soon.</p>
+            <div class="project-stack">
+                <span>Backend APIs</span>
+                <span>React UI</span>
+                <span>Transaction Flows</span>
+                <span>Secure Payments</span>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

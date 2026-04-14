@@ -1,374 +1,917 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/theme.js"></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script defer src="js/script.js"></script>
+    <script defer src="js/certifications.js"></script>
 
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/theme.css" />
 
     <title>Low Jie Wei</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <a href="#"><img src="/img/logo-bright.png" alt="low jie wei logo" class="logo" /></a>
-        <nav class="main-nav">
-            <ul class="main-nav-list">
-                <li><a class="main-nav-link" href="#about">About</a></li>
-                <li><a class="main-nav-link" href="#experience">Experience</a></li>
-                <li><a class="main-nav-link" href="#projects">Projects</a></li>
-                <li><a class="main-nav-link" href="#certifications">Certifications</a></li>
-                <li><a class="main-nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <a href="#" class="brand-mark" aria-label="Low Jie Wei home">
+        <span class="brand-monogram">LJW</span>
+        <span class="brand-text">
+          <span class="brand-name">Low Jie Wei</span>
+        </span>
+      </a>
 
-        <button class="btn-mobile-nav">
-            <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-            <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#about">About</a></li>
+          <li><a class="main-nav-link" href="#experience">Experience</a></li>
+          <li><a class="main-nav-link" href="#projects">Projects</a></li>
+          <li>
+            <a class="main-nav-link" href="#certifications">Certifications</a>
+          </li>
+          <li>
+            <a class="main-nav-link main-nav-link--cta" href="#contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+        >
+          <span class="sr-only">Toggle color theme</span>
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__icon theme-toggle__icon--sun"></span>
+            <span class="theme-toggle__icon theme-toggle__icon--moon"></span>
+            <span class="theme-toggle__thumb"></span>
+          </span>
         </button>
+
+        <button
+          class="btn-mobile-nav"
+          type="button"
+          aria-label="Toggle navigation"
+        >
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </div>
     </header>
 
     <main>
-        <section class="section-home">
-            <div class="home">
-                <div class="home-text">
-                    <h1 class="heading-primary">Low Jie Wei</h1>
-                    <p class="home-description">Senior Backend Software Engineer at Shopee. Building scalable, highly available backend services.</p>
-                    <a href="http://www.linkedin.com/in/lowjiewei" class="btn btn--full mr-sm" target="_blank"
-                        rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/LeonLow97" class="btn btn--outline" target="_blank"
-                        rel="noopener">GitHub</a>
-                </div>
-                <div class="home-img-box">
-                    <img src="img/me/me_japan.png" alt="Photo of Low Jie Wei" class="home-img" />
-                </div>
-            </div>
-        </section>
+      <section class="section-home">
+        <div class="hero-aurora" aria-hidden="true"></div>
+        <div class="home">
+          <div class="home-text">
+            <h1 class="heading-primary home-title">Leon Low Jie Wei</h1>
+            <span class="home-eyebrow">Senior Backend Software Engineer at Shopee</span>
+            <p class="home-description">
+              Building large-scale <strong>distributed systems</strong> with
+              <strong>high concurrency</strong>, backend and database
+              <strong>performance optimization</strong>, and
+              <strong>sole ownership</strong> of Shopee's Database Metadata
+              Service.
+            </p>
 
-        <section id="about" class="section-about">
-            <div class="about-container text-center">
-                <span class="subheading">Get To Know More</span>
-                <h2 class="heading-secondary">About Me</h2>
+            <div class="home-actions">
+              <a
+                href="http://www.linkedin.com/in/lowjiewei"
+                class="btn btn--full"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                href="https://github.com/LeonLow97"
+                class="btn btn--outline"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
             </div>
+          </div>
 
-            <div class="about grid grid--3-cols">
-                <div class="about-img-box">
-                    <img src="img/me/me_melbourne.jpg" alt="Photo of Low Jie Wei" class="about-img">
-                </div>
-                <div class="about-text-box">
-                    <div class="about-description">
-                        <h3 class="heading-tertiary about-header">About</h3>
-                        <p class="about-description">
-                            Hey There! I am a Senior Backend Software Engineer at Shopee, working on the Shopee Database Metadata Service.
-                            I build scalable backend systems that power database discovery, ownership, governance, and lifecycle workflows,
-                            helping teams operate safely and efficiently at scale. I love learning new technologies and using them to solve
-                            challenging real-world problems with measurable impact. I’m also a self-taught engineer who transitioned into
-                            tech, and I bring strong communication, leadership, and ownership—able to work independently while partnering
-                            closely with cross-functional teams.
-                        </p>
-                    </div>
-                    <nav class="about-nav">
-                        <ul class="about-nav-list">
-                            <li><a class="about-nav-link about-nav-link-skills" href="javascript:void(0)">Skills</a>
-                            </li>
-                            <li><a class="about-nav-link about-nav-link-education"
-                                    href="javascript:void(0)">Education</a></li>
-                        </ul>
-                        <div class="about-nav-skills">
-                            <ul class="about-skills-list">
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/golang.png" /><span>Golang</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/java.png" /><span>Java</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/springboot.png" /><span>SpringBoot</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/javascript.png" /><span>JavaScript</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/react.png" /><span>React</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/vue.png" /><span>Vue</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/typescript.png" /><span>TypeScript</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/node.png" /><span>Node</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/python.png" /><span>Python</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/mysql.png" /><span>MySQL</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/postgresql.png" /><span>PostgreSQL</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/mssql.png" /><span>MS SQL</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/redis.png" /><span>Redis</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/github.png" /><span>GitHub</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/gitlab.png" /><span>GitLab</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/docker.png" /><span>Docker</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/kubernetes.png" /><span>Kubernetes</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/linux.png" /><span>Linux</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img"
-                                        src="./img/languages/kafka.png" /><span>Apache Kafka</span></li>
-                                <li class="about-skills-list--item"><img class="skills-img grpc"
-                                        src="./img/languages/grpc.png" /><span>gRPC</span></li>
-                            </ul>
-                        </div>
-                        <div class="about-nav-education">
-                            <ul class="about-education-list">
-                                <li><ion-icon class="academic-icon" name="school-outline"></ion-icon>
-                                    &nbsp; National University of Singapore</li>
-                                <li><ion-icon class="academic-icon" name="school-outline"></ion-icon>
-                                    &nbsp; National Junior College</li>
-                                <li><ion-icon class="academic-icon" name="school-outline"></ion-icon>
-                                    &nbsp; Bukit Panjang Govt. High School</li>
-                                <li><ion-icon class="academic-icon" name="school-outline"></ion-icon>
-                                    &nbsp; Pei Hwa Presbyterian Primary School</li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
+          <div class="home-img-box">
+            <div class="home-photo-shell">
+              <img
+                src="img/me/me_japan.png"
+                alt="Photo of Low Jie Wei"
+                class="home-img"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="experience" class="section-experience">
-            <div class="container container-headings">
-                <span class="subheading">Professional Journey</span>
-                <h2 class="heading-secondary">Work Experience</h2>
+      <section id="about" class="section-about">
+        <div class="about-container container text-center">
+          <span class="subheading">Get To Know More</span>
+          <h2 class="heading-secondary">About Me</h2>
+        </div>
+
+        <div class="about grid grid--3-cols">
+          <div class="about-img-box">
+            <img
+              src="img/me/me_melbourne.jpg"
+              alt="Photo of Low Jie Wei"
+              class="about-img"
+            />
+          </div>
+
+          <div class="about-text-box">
+            <div class="about-panel">
+              <p class="about-description">
+                I’m Leon Low Jie Wei. I am a Senior Software Engineer
+                at Shopee, where I build distributed systems involving
+                concurrency, microservices, and large-scale project ownership. I
+                enjoy solving hard engineering problems with clear systems
+                thinking and strong end-to-end ownership.
+              </p>
             </div>
 
-            <div class="experience-timeline">
-                <div class="experience-checkpoint">
-                    <div>
-                        <h2 class="experience-company--name"><span>Shopee</span><img class="experience-company--image"
-                                src="./img/companies/shopee.svg" />
-                        </h2>
-                        <p class="experience-role">Senior Software Engineer (Backend)</p>
-                        <p class="experience-type">Full Time</p>
-                        <p class="experience-duration">Aug 2025 - Present</p>
-                        <ul class="experience-list">
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Coming Soon ...
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-checkpoint">
-                    <div>
-                        <h2 class="experience-company--name"><span>Thunes</span><img class="experience-company--image"
-                                src="./img/companies/thunes.svg" />
-                        </h2>
-                        <p class="experience-role">Software Engineer (Fullstack)</p>
-                        <p class="experience-type">Full Time</p>
-                        <p class="experience-duration">Aug 2023 - Aug 2025</p>
-                        <ul class="experience-list">
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Coming Soon ...
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-checkpoint">
-                    <div>
-                        <h2 class="experience-company--name"><span>ST Engineering</span><img
-                                class="experience-company--image" src="./img/companies/stengineering.png" /></h2>
-                        <p class="experience-role">Software Engineer (Fullstack)</p>
-                        <p class="experience-type">Full Time</p>
-                        <p class="experience-duration">Jun 2022 - Aug 2023</p>
-                        <ul class="experience-list">
-                            <li class="experience-list-item">
-                                <span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon>
-                                </span>Developed a Multi-Factor Authentication
-                                reusable module on both backend and frontend using C#, .NET Framework and WCF for
-                                seamless integration with future department projects.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Incorporated SAML 2.0
-                                Authentication,
-                                integration Identity Provider and Service Provider for secure authentication with ADFS.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Delivered 10 bug fixes and 2
-                                feature
-                                updates with 100% accuracy to UAT and Production environments.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Coming soon...
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-checkpoint">
-                    <div>
-                        <h2 class="experience-company--name"><span>Sembcorp</span><img class="experience-company--image"
-                                src="./img/companies/sembcorp.png" /></h2>
-                        <p class="experience-role">Technology Analyst</p>
-                        <p class="experience-type">Intern</p>
-                        <p class="experience-duration">Jan 2021 - Jun 2021</p>
-                        <ul class="experience-list">
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Led the development of an
-                                industrial plant
-                                project using MATLAB to extract and analyze 3 months of data from several Microsoft
-                                Excel files to analyse the production rate.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Utilized Python Pandas to
-                                optimize the
-                                industrial plant project's performance, resulting in almost 90% enhancement in
-                                performance.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Conducted in-depth research on 7
-                                sustainable technologies and presented key data using Microsoft PowerPoint to the
-                                department.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Acknowledged by the Group CEO
-                                for
-                                identifying potential business opportunities through an analysis of a technology report.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Coordinated and managed the
-                                administrative
-                                matters of 6 interns in the department effectively.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-checkpoint">
-                    <div>
-                        <h2 class="experience-company--name"><span>Improvement Learning Centre</span></h2>
-                        <p class="experience-role">Tutor</p>
-                        <p class="experience-type">Part Time</p>
-                        <p class="experience-duration">Jan 2018 - Dec 2019</p>
-                        <ul class="experience-list">
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Mentored 2 Junior College
-                                students in H2
-                                Math and 3 Secondary School students in GCE 'O' Level A'Math, E'Math and Chemistry.
-                            </li>
-                            <li class="experience-list-item"><span><ion-icon name="checkmark-circle-outline"
-                                        class="experience-list-check"></ion-icon></span>Implemented strategies to
-                                strengthen
-                                students' foundational knowledge, resulting in significant academic progress evidenced
-                                by improvements from failing grades to A/B level in their national examinations.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <nav class="about-nav about-panel">
+              <ul class="about-nav-list">
+                <li>
+                  <a
+                    class="about-nav-link about-nav-link-skills"
+                    href="javascript:void(0)"
+                    >Skills</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="about-nav-link about-nav-link-education"
+                    href="javascript:void(0)"
+                    >Education</a
+                  >
+                </li>
+              </ul>
 
-        <section id="projects" class="section-projects">
-            <div class="container-headings text-center">
-                <span class="subheading">Crafting Dreams</span>
-                <h2 class="heading-secondary">My Personal Projects</h2>
-            </div>
+              <div class="about-nav-skills">
+                <div class="about-skills-preview">
+                  <ul class="about-skills-list">
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/golang.png"
+                      alt="Golang logo"
+                    /><span>Golang</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/java.png"
+                      alt="Java logo"
+                    /><span>Java</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/springboot.png"
+                      alt="Spring Boot logo"
+                    /><span>SpringBoot</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/javascript.png"
+                      alt="JavaScript logo"
+                    /><span>JavaScript</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/react.png"
+                      alt="React logo"
+                    /><span>React</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/vue.png"
+                      alt="Vue logo"
+                    /><span>Vue</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/typescript.png"
+                      alt="TypeScript logo"
+                    /><span>TypeScript</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/node.png"
+                      alt="Node.js logo"
+                    /><span>Node</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/python.png"
+                      alt="Python logo"
+                    /><span>Python</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/mysql.png"
+                      alt="MySQL logo"
+                    /><span>MySQL</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/postgresql.png"
+                      alt="PostgreSQL logo"
+                    /><span>PostgreSQL</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/redis.png"
+                      alt="Redis logo"
+                    /><span>Redis</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/github.png"
+                      alt="GitHub logo"
+                    /><span>GitHub</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/docker.png"
+                      alt="Docker logo"
+                    /><span>Docker</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/kubernetes.png"
+                      alt="Kubernetes logo"
+                    /><span>Kubernetes</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/linux.png"
+                      alt="Linux logo"
+                    /><span>Linux</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img"
+                      src="./img/languages/kafka.png"
+                      alt="Apache Kafka logo"
+                    /><span>Apache Kafka</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img grpc"
+                      src="./img/languages/grpc.png"
+                      alt="gRPC logo"
+                    /><span>gRPC</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img aws"
+                      src="./img/languages/aws.png"
+                      alt="AWS logo"
+                    /><span>AWS</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img grafana"
+                      src="./img/languages/grafana.svg"
+                      alt="Grafana logo"
+                    /><span>Grafana</span>
+                  </li>
+                  <li class="about-skills-list--item">
+                    <img
+                      class="skills-img prometheus"
+                      src="./img/languages/prometheus.svg"
+                      alt="Prometheus logo"
+                    /><span>Prometheus</span>
+                  </li>
+                  </ul>
 
-            <div class="projects container grid grid--3-cols">
-                <div class="project">
-                    <ion-icon class="project-icon" name="shirt-outline"></ion-icon>
-                    <p class="project-title">Inventory Management</p>
-                    <p class="project-description">Building Microservices Architecture in Go and Vue 3, our system
-                        seamlessly tracks and manages inventory, orders, and deliveries, enhancing business operations.
+                  <div class="about-skills-fade">
+                    <p class="about-skills-fade-note">
+                      More skills continue below.
                     </p>
-                    <a class="project-link" href="./pages/ims-project.html" target="_blank" rel="noopener">Learn More
-                        &rarr;</a>
+                    <button class="about-skills-more btn btn--full" type="button">
+                      See More
+                    </button>
+                  </div>
                 </div>
-                <div class="project">
-                    <ion-icon class="project-icon" name="wallet-outline"></ion-icon>
-                    <p class="project-title">Digital Wallet</p>
-                    <p class="project-description">Fullstack Web Application in Go and React, a secure and user-friendly
-                        digital payment application that allows users to store, manage, and make transactions with their
-                        funds quickly, securely!</p>
+              </div>
 
-                    <a class="project-link" href="./pages/digital-wallet.html">Learn More &rarr;</a>
+              <div class="about-nav-education">
+                <ul class="about-education-list">
+                  <li>
+                    <ion-icon
+                      class="academic-icon"
+                      name="school-outline"
+                    ></ion-icon
+                    >National University of Singapore
+                  </li>
+                  <li>
+                    <ion-icon
+                      class="academic-icon"
+                      name="school-outline"
+                    ></ion-icon
+                    >National Junior College
+                  </li>
+                  <li>
+                    <ion-icon
+                      class="academic-icon"
+                      name="school-outline"
+                    ></ion-icon
+                    >Bukit Panjang Govt. High School
+                  </li>
+                  <li>
+                    <ion-icon
+                      class="academic-icon"
+                      name="school-outline"
+                    ></ion-icon
+                    >Pei Hwa Presbyterian Primary School
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section-experience">
+        <div class="container container-headings text-center">
+          <span class="subheading">Professional Journey</span>
+          <h2 class="heading-secondary">Work Experience</h2>
+          <p class="section-copy">
+            A mix of backend, platform, and fullstack roles focused on
+            reliability, maintainability, and real delivery outcomes.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+          <article class="experience-checkpoint">
+            <p class="experience-period">2025 — Present</p>
+            <div class="experience-card">
+              <div class="experience-card-top">
+                <div class="experience-company-group">
+                  <h2 class="experience-company--name">
+                    <span>Shopee</span
+                    ><img
+                      class="experience-company--image"
+                      src="./img/companies/shopee.svg"
+                      alt="Shopee logo"
+                    />
+                  </h2>
+                  <p class="experience-role">Senior Software Engineer</p>
                 </div>
-                <div class="project">
-                    <ion-icon class="project-icon" name="bar-chart-outline"></ion-icon>
-                    <p class="project-title">Stock Market Broker</p>
-                    <p class="project-description">Java SpringBoot REST API, elevating user experiences by providing
-                        seamless access to stock market insights, facilitating effortless order placement, and enabling
-                        intuitive management of account details.
-                    </p>
-                    <a class="project-link" href="./pages/stock-market-project.html">Learn More &rarr;</a>
-                </div>
+                <p class="experience-duration">Aug 2025 - Present</p>
+              </div>
+
+              <div class="experience-meta">
+                <span class="experience-tag">Backend</span>
+                <span class="experience-tag">Full Time</span>
+                <span class="experience-tag">Shopee</span>
+              </div>
+
+              <ul class="experience-list">
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Highlights for this role will be added soon.
+                </li>
+              </ul>
             </div>
-        </section>
+          </article>
 
-        <section id="contact" class="section-contact">
-            <div class="container-headings text-center">
-                <span class="subheading">Let's Connect</span>
-                <h2 class="heading-secondary">My Contact</h2>
+          <article class="experience-checkpoint">
+            <p class="experience-period">2023 — 2025</p>
+            <div class="experience-card">
+              <div class="experience-card-top">
+                <div class="experience-company-group">
+                  <h2 class="experience-company--name">
+                    <span>Thunes</span
+                    ><img
+                      class="experience-company--image"
+                      src="./img/companies/thunes.svg"
+                      alt="Thunes logo"
+                    />
+                  </h2>
+                  <p class="experience-role">Software Engineer</p>
+                </div>
+                <p class="experience-duration">Aug 2023 - Aug 2025</p>
+              </div>
+
+              <div class="experience-meta">
+                <span class="experience-tag">Fullstack</span>
+                <span class="experience-tag">Full Time</span>
+                <span class="experience-tag">Payments</span>
+              </div>
+
+              <ul class="experience-list">
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Highlights for this role will be added soon.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-checkpoint">
+            <p class="experience-period">2022 — 2023</p>
+            <div class="experience-card">
+              <div class="experience-card-top">
+                <div class="experience-company-group">
+                  <h2 class="experience-company--name">
+                    <span>ST Engineering</span
+                    ><img
+                      class="experience-company--image"
+                      src="./img/companies/stengineering.png"
+                      alt="ST Engineering logo"
+                    />
+                  </h2>
+                  <p class="experience-role">Software Engineer</p>
+                </div>
+                <p class="experience-duration">Jun 2022 - Aug 2023</p>
+              </div>
+
+              <div class="experience-meta">
+                <span class="experience-tag">Fullstack</span>
+                <span class="experience-tag">Full Time</span>
+                <span class="experience-tag">Enterprise Systems</span>
+              </div>
+
+              <ul class="experience-list">
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Built a reusable MFA module across backend and frontend with
+                  C#, .NET Framework, and WCF for future internal projects.
+                </li>
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Integrated SAML 2.0 authentication flows with ADFS for secure
+                  identity provider and service provider access.
+                </li>
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Delivered 10 bug fixes and 2 feature releases cleanly through
+                  UAT and Production.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-checkpoint">
+            <p class="experience-period">2021</p>
+            <div class="experience-card">
+              <div class="experience-card-top">
+                <div class="experience-company-group">
+                  <h2 class="experience-company--name">
+                    <span>Sembcorp</span
+                    ><img
+                      class="experience-company--image"
+                      src="./img/companies/sembcorp.png"
+                      alt="Sembcorp logo"
+                    />
+                  </h2>
+                  <p class="experience-role">Technology Analyst</p>
+                </div>
+                <p class="experience-duration">Jan 2021 - Jun 2021</p>
+              </div>
+
+              <div class="experience-meta">
+                <span class="experience-tag">Intern</span>
+                <span class="experience-tag">Data Analysis</span>
+                <span class="experience-tag">Research</span>
+              </div>
+
+              <ul class="experience-list">
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Led an industrial plant analysis project with MATLAB,
+                  extracting and studying three months of Excel-based production
+                  data.
+                </li>
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Used Python Pandas to improve processing performance by
+                  almost 90%.
+                </li>
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Presented research on sustainable technologies and was
+                  recognized by the Group CEO for identifying potential business
+                  opportunities.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience-checkpoint">
+            <p class="experience-period">2018 — 2019</p>
+            <div class="experience-card">
+              <div class="experience-card-top">
+                <div class="experience-company-group">
+                  <h2 class="experience-company--name">
+                    <span>Improvement Learning Centre</span>
+                  </h2>
+                  <p class="experience-role">Tutor</p>
+                </div>
+                <p class="experience-duration">Jan 2018 - Dec 2019</p>
+              </div>
+
+              <div class="experience-meta">
+                <span class="experience-tag">Part Time</span>
+                <span class="experience-tag">Teaching</span>
+                <span class="experience-tag">Mentorship</span>
+              </div>
+
+              <ul class="experience-list">
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Mentored Junior College and Secondary School students in H2
+                  Math, A Math, E Math, and Chemistry.
+                </li>
+                <li class="experience-list-item">
+                  <span
+                    ><ion-icon
+                      name="checkmark-circle-outline"
+                      class="experience-list-check"
+                    ></ion-icon></span
+                  >Strengthened foundational understanding and helped students
+                  improve from failing grades to A and B outcomes.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section-projects">
+        <div class="container-headings text-center container">
+          <span class="subheading">Crafting Systems</span>
+          <h2 class="heading-secondary">Featured Projects</h2>
+          <p class="section-copy">
+            Selected GitHub builds across backend systems, data engineering,
+            automation, Kubernetes, and machine learning.
+          </p>
+        </div>
+
+        <div class="projects container grid grid--3-cols">
+          <article class="project">
+            <span class="project-kicker">Data Engineering</span>
+            <h3 class="project-title">Common Crawl Deduplication Pipeline</h3>
+            <div class="project-skills">
+              <span class="project-skill">GCP</span>
+              <span class="project-skill">Spark</span>
+              <span class="project-skill">BigQuery</span>
+              <span class="project-skill">MinHashLSH</span>
+            </div>
+            <p class="project-description">
+              A batch GCP pipeline that ingests Common Crawl WET text, removes
+              boilerplate, detects near-duplicate pages with Spark
+              MinHashLSH, and publishes curated quality tables to BigQuery.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/common-crawl-deduplication-data-engineering-pipeline"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Workflow Automation</span>
+            <h3 class="project-title">n8n Projects</h3>
+            <div class="project-skills">
+              <span class="project-skill">n8n</span>
+              <span class="project-skill">RAG</span>
+              <span class="project-skill">Pinecone</span>
+              <span class="project-skill">Gmail</span>
+            </div>
+            <p class="project-description">
+              A growing set of automation workflows, starting with an
+              AI-powered customer support email flow using Google Drive
+              ingestion, embeddings, Pinecone retrieval, and Gmail drafting.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/n8n-projects"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Microservices Platform</span>
+            <h3 class="project-title">Authify</h3>
+            <div class="project-skills">
+              <span class="project-skill">Go</span>
+              <span class="project-skill">gRPC</span>
+              <span class="project-skill">k8s</span>
+              <span class="project-skill">PostgreSQL</span>
+              <span class="project-skill">AWS</span>
+              <span class="project-skill">Terraform</span>
+            </div>
+            <p class="project-description">
+              A production-ready microservices architecture built around Go,
+              gRPC, Kubernetes, and service-to-service authentication patterns.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/authify"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Cloud Native</span>
+            <h3 class="project-title">Kubernetes Projects</h3>
+            <div class="project-skills">
+              <span class="project-skill">Kubernetes</span>
+              <span class="project-skill">Ingress</span>
+              <span class="project-skill">Kafka</span>
+              <span class="project-skill">Operator</span>
+            </div>
+            <p class="project-description">
+              A collection of advanced Kubernetes builds covering a MySQL
+              operator, ingress-based routing for microservices, and
+              Kafka-backed event processing patterns.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/k8s-projects"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Machine Learning</span>
+            <h3 class="project-title">Loan Default Classification</h3>
+            <div class="project-skills">
+              <span class="project-skill">Python</span>
+              <span class="project-skill">Machine Learning</span>
+              <span class="project-skill">Feature Engineering</span>
+              <span class="project-skill">Model Validation</span>
+            </div>
+            <p class="project-description">
+              A machine learning project focused on data exploration, feature
+              engineering, model building, hyperparameter tuning, and
+              validation for identifying high-risk loan applicants.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/loan-default-classification-machine-learning"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Payments Backend</span>
+            <h3 class="project-title">Digital Wallet Provider</h3>
+            <div class="project-skills">
+              <span class="project-skill">Go</span>
+              <span class="project-skill">Vue</span>
+              <span class="project-skill">PostgreSQL</span>
+              <span class="project-skill">REST API</span>
+            </div>
+            <p class="project-description">
+              A secure digital payment application that lets users store,
+              manage, and transact with funds through a cleaner fullstack
+              wallet experience.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/digital-wallet-provider-golang-vue-postgresql"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+
+          <article class="project">
+            <span class="project-kicker">Backend API</span>
+            <h3 class="project-title">Stock Market Broker REST API</h3>
+            <div class="project-skills">
+              <span class="project-skill">Java</span>
+              <span class="project-skill">Spring Boot</span>
+              <span class="project-skill">REST API</span>
+              <span class="project-skill">Trading Flows</span>
+            </div>
+            <p class="project-description">
+              A stock market platform that enables users to manage account
+              information, access market data, and place orders through a
+              structured REST API.
+            </p>
+            <a
+              class="btn btn--outline project-link-btn"
+              href="https://github.com/LeonLow97/stock-market-broker-restapi-java-springboot"
+              target="_blank"
+              rel="noopener"
+              >View Project</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section-certifications">
+        <div class="container-headings text-center container">
+          <span class="subheading">Continuous Learning</span>
+          <h2 class="heading-secondary">Certifications</h2>
+        </div>
+
+        <div class="cert-preview-shell container">
+          <div class="cert-preview-card">
+            <div class="cert-preview-table-wrap">
+              <table class="cert-preview-table">
+                <thead>
+                  <tr>
+                    <th>Completed</th>
+                    <th>Provider</th>
+                    <th>Certification</th>
+                    <th>Focus</th>
+                  </tr>
+                </thead>
+                <tbody data-certifications-body data-cert-limit="8"></tbody>
+              </table>
+
+              <div class="cert-preview-fade">
+                <p class="cert-preview-fade-note">
+                  More certifications continue below.
+                </p>
+                <a class="btn btn--full" href="pages/certifications-full.html"
+                  >See More</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-contact">
+        <div class="container-headings text-center container">
+          <span class="subheading">Let's Connect</span>
+          <h2 class="heading-secondary">Contact</h2>
+          <p class="section-copy">
+            For engineering, collaboration, or opportunities, feel free to reach
+            out.
+          </p>
+        </div>
+
+        <div class="contact-container container grid grid--2-cols">
+          <form class="contact-form">
+            <div>
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              />
             </div>
 
-            <div class="contact-container container grid grid--2-cols">
-                <form class="contact-form">
-                    <div>
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Leon Low" required />
-                    </div>
-
-                    <div>
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" placeholder="leonlow@example.com" required />
-                    </div>
-
-                    <div>
-                        <label for="messsage">Message</label>
-                        <textarea id="message" style="resize: none;" placeholder="Hello Jie Wei, nice to meet you..."
-                            required></textarea>
-                    </div>
-
-                    <button class="btn btn--form">Send Message</button>
-                </form>
-
-                <div class="contact-details">
-                    <div>
-                        <h3 class="contact-details-icons-container"><ion-icon
-                                name="mail-outline"></ion-icon><span>Email</span></h3>
-                        <p>lowjiewei@gmail.com</p>
-                    </div>
-
-                    <div>
-                        <h3 class="contact-details-icons-container"><ion-icon
-                                name="location-outline"></ion-icon><span>Based
-                                In</span></h3>
-                        <p>Singapore</p>
-                    </div>
-                </div>
-
-                <div class="contact-icons">
-                    <a href="https://www.instagram.com/lowjiewei/" target="_blank" rel="noopener"><ion-icon
-                            name="logo-instagram"></ion-icon></a>
-                    <a href="http://www.linkedin.com/in/lowjiewei" target="_blank" rel="noopener"><ion-icon
-                            name="logo-linkedin"></ion-icon></a>
-                    <a href="https://github.com/LeonLow97" target="_blank" rel="noopener"><ion-icon
-                            name="logo-github"></ion-icon></a>
-                </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              />
             </div>
 
-        </section>
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                rows="6"
+                style="resize: none"
+                placeholder="Write your message here"
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn--form" type="submit">Send Message</button>
+          </form>
+
+          <div class="contact-sidebar">
+            <div class="contact-details">
+              <div>
+                <h3 class="contact-details-icons-container">
+                  <ion-icon name="mail-outline"></ion-icon><span>Email</span>
+                </h3>
+                <p>lowjiewei@gmail.com</p>
+              </div>
+
+              <div>
+                <h3 class="contact-details-icons-container">
+                  <ion-icon name="location-outline"></ion-icon
+                  ><span>Based In</span>
+                </h3>
+                <p>Singapore</p>
+              </div>
+            </div>
+
+            <div class="contact-icons">
+              <a
+                href="http://www.linkedin.com/in/lowjiewei"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <a
+                href="https://github.com/LeonLow97"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
-
+  </body>
 </html>

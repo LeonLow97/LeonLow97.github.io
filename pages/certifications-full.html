@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <script src="../js/theme.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="../js/certifications.js"></script>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="stylesheet" href="../css/certifications.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <title>All Certifications | Low Jie Wei</title>
+</head>
+
+<body>
+    <div class="cert-shell">
+        <header class="cert-header">
+            <a class="cert-brand" href="../index.html">
+                <span class="cert-brand-mark">LJW</span>
+                <span class="cert-brand-copy">
+                    <span class="cert-brand-title">My Certifications</span>
+                </span>
+            </a>
+            <div class="cert-header-actions">
+                <button
+                    class="theme-toggle"
+                    type="button"
+                    data-theme-toggle
+                    aria-label="Switch to dark mode"
+                    aria-pressed="false"
+                >
+                    <span class="sr-only">Toggle color theme</span>
+                    <span class="theme-toggle__track" aria-hidden="true">
+                        <span class="theme-toggle__icon theme-toggle__icon--sun"></span>
+                        <span class="theme-toggle__icon theme-toggle__icon--moon"></span>
+                        <span class="theme-toggle__thumb"></span>
+                    </span>
+                </button>
+            </div>
+        </header>
+    </div>
+
+    <main class="cert-page">
+        <section class="cert-table-card">
+            <div class="cert-table-wrap">
+                <table class="cert-table">
+                    <thead>
+                        <tr>
+                            <th>Completed</th>
+                            <th>Provider</th>
+                            <th>Certification</th>
+                            <th>Focus</th>
+                        </tr>
+                    </thead>
+                    <tbody data-certifications-body></tbody>
+                </table>
+            </div>
+
+        </section>
+    </main>
+</body>
+
+</html>
