@@ -3,22 +3,77 @@
 /**************************/
 @media (min-width: 56.3125em) {
   .section-about,
-  .section-projects,
-  .section-certifications,
-  .section-contact {
-    min-height: calc(100svh - var(--sticky-header-offset));
+  .section-certifications {
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-block: 6rem;
+    scroll-margin-top: 0;
+  }
+
+  .section-contact {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: clamp(2.4rem, 3vh, 4rem);
+    scroll-margin-top: 0;
+  }
+
+  .section-experience,
+  .section-projects {
+    scroll-margin-top: 0;
   }
 
   .home {
     align-items: center;
   }
 
-  .section-contact {
-    padding-bottom: 6rem;
+  .section-contact .container-headings {
+    margin-bottom: clamp(1.8rem, 3vh, 3.2rem);
+  }
+
+  .contact-container {
+    padding: clamp(2rem, 2.6vh, 3rem);
+    gap: clamp(2rem, 2.6vw, 3.2rem);
+  }
+
+  .contact-form,
+  .contact-sidebar {
+    padding: clamp(0.2rem, 0.9vh, 1rem);
+  }
+
+  .contact-form {
+    gap: clamp(1.4rem, 1.8vh, 2rem);
+  }
+
+  .contact-form label {
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: clamp(1.2rem, 1.6vh, 1.5rem) clamp(1.4rem, 1.8vw, 1.7rem);
+  }
+
+  .contact-form textarea {
+    height: clamp(11rem, 15vh, 16rem);
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  .contact-sidebar {
+    gap: clamp(1.6rem, 2vh, 2.4rem);
+  }
+
+  .contact-details {
+    gap: 1.2rem;
+  }
+
+  .contact-details div {
+    gap: 0.9rem;
+    padding: clamp(1.6rem, 2vh, 2.2rem);
   }
 }
 
@@ -26,6 +81,11 @@
 /* Below 1100px */
 /**************************/
 @media (max-width: 69em) {
+  .ambient-bubbles span:nth-child(7),
+  .ambient-bubbles span:nth-child(8) {
+    display: none;
+  }
+
   .home {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -76,6 +136,10 @@
 /* Below 900px */
 /**************************/
 @media (max-width: 56.25em) {
+  .ambient-bubbles span {
+    opacity: 0.44;
+  }
+
   html {
     font-size: 58%;
   }
@@ -87,8 +151,16 @@
     margin-top: 1rem;
   }
 
+  .header-actions {
+    gap: 0.8rem;
+  }
+
   .brand-role {
     display: none;
+  }
+
+  .brand-name {
+    font-size: 2.7rem;
   }
 
   .btn-mobile-nav {
@@ -106,6 +178,8 @@
     border-radius: 2.8rem;
     padding: 1.4rem;
     box-shadow: 0 2rem 4rem rgba(54, 32, 20, 0.14);
+    max-height: calc(100svh - 10rem);
+    overflow-y: auto;
     transform: translateY(-1rem);
     opacity: 0;
     pointer-events: none;
@@ -170,6 +244,10 @@
     justify-content: center;
   }
 
+  .home-actions .btn {
+    min-width: 0;
+  }
+
   .home-img-box {
     order: -1;
     margin-top: 0.8rem;
@@ -200,10 +278,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .about-skills-fade {
-    padding-top: 11rem;
-  }
-
   .experience-timeline::before {
     left: 2.4rem;
   }
@@ -228,8 +302,33 @@
     align-items: flex-start;
   }
 
+  .experience-card {
+    padding: 2.6rem;
+  }
+
+  .experience-company--name {
+    font-size: 3.2rem;
+    gap: 1.2rem;
+  }
+
+  .experience-role {
+    font-size: 1.8rem;
+  }
+
+  .project {
+    padding: 2.6rem;
+  }
+
+  .project-title {
+    font-size: 2.9rem;
+  }
+
   .contact-sidebar {
     padding-top: 0;
+  }
+
+  .contact-details h3 {
+    font-size: 2.8rem;
   }
 
   .contact-icons {
@@ -307,8 +406,14 @@
   }
 
   .header {
+    width: calc(100% - 1.4rem);
     top: 1rem;
+    padding: 1rem 1.2rem;
     border-radius: 2.4rem;
+  }
+
+  .brand-text {
+    display: none;
   }
 
   .brand-name {
@@ -318,6 +423,15 @@
   .brand-monogram {
     width: 4.6rem;
     height: 4.6rem;
+  }
+
+  .main-nav {
+    border-radius: 2.4rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    padding: 1.2rem;
   }
 
   .section-home,
@@ -334,17 +448,49 @@
     padding: 1.6rem 0 2.4rem;
   }
 
+  .home {
+    width: min(100%, calc(100% - 2.4rem));
+    gap: 3rem;
+  }
+
+  .home-description {
+    font-size: 1.75rem;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-actions .btn {
+    width: 100%;
+  }
+
   .about-panel,
   .project,
-  .experience-checkpoint div,
+  .experience-card,
   .contact-container {
     border-radius: 2.4rem;
   }
 
   .about-panel,
   .project,
-  .experience-checkpoint div {
+  .experience-card {
     padding: 2.4rem;
+  }
+
+  .about-nav-list {
+    flex-direction: column;
+  }
+
+  .about-nav-link:link,
+  .about-nav-link:visited {
+    display: flex;
+    justify-content: center;
+  }
+
+  .experience-timeline {
+    padding: 0 1.2rem;
   }
 
   .open .about-skills-list {
@@ -352,12 +498,27 @@
   }
 
   .experience-company--name {
+    font-size: 3rem;
     align-items: flex-start;
     flex-direction: column;
   }
 
   .experience-company--image {
     height: 2.2rem;
+  }
+
+  .experience-duration {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 2.7rem;
+  }
+
+  .project-link-btn {
+    width: 100%;
+    align-self: stretch;
   }
 
   .contact-container {
@@ -367,6 +528,14 @@
   .contact-form,
   .contact-sidebar {
     padding: 0.4rem;
+  }
+
+  .contact-details h3 {
+    font-size: 2.6rem;
+  }
+
+  .contact-details p {
+    overflow-wrap: anywhere;
   }
 
   .cert-preview-card {
@@ -393,10 +562,6 @@
     margin-top: 0.6rem;
   }
 
-  .brand-text {
-    display: none;
-  }
-
   .heading-primary {
     font-size: 4.6rem;
   }
@@ -405,13 +570,25 @@
     font-size: 4rem;
   }
 
-  .home-actions .btn {
-    width: 100%;
+  .home {
+    width: calc(100% - 1.6rem);
+  }
+
+  .about-panel,
+  .project,
+  .experience-card,
+  .cert-preview-card,
+  .contact-container {
+    padding: 1.8rem;
   }
 
   .cert-preview-table td {
     grid-template-columns: 1fr;
     gap: 0.4rem;
+  }
+
+  .experience-company--name {
+    font-size: 2.6rem;
   }
 
   .experience-checkpoint {
@@ -424,6 +601,15 @@
 
   .experience-checkpoint::before {
     left: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.6rem;
+  }
+
+  .contact-details div {
+    padding: 1.6rem;
   }
 
   .open .about-skills-list {

@@ -2,7 +2,6 @@ const skillsNavEl = document.querySelector('.about-nav-link-skills');
 const educationNavEl = document.querySelector('.about-nav-link-education');
 const skillsListEl = document.querySelector('.about-nav-skills');
 const educationListEl = document.querySelector('.about-nav-education');
-const skillsMoreBtnEl = document.querySelector('.about-skills-more');
 
 if (skillsNavEl && educationNavEl && skillsListEl && educationListEl) {
   document.addEventListener('DOMContentLoaded', () => {
@@ -22,16 +21,9 @@ if (skillsNavEl && educationNavEl && skillsListEl && educationListEl) {
     educationNavEl.classList.add('active');
     skillsNavEl.classList.remove('active');
 
-    skillsListEl.classList.remove('about-nav-skills--expanded');
     educationListEl.classList.add('open');
     skillsListEl.classList.remove('open');
   });
-
-  if (skillsMoreBtnEl) {
-    skillsMoreBtnEl.addEventListener('click', () => {
-      skillsListEl.classList.add('about-nav-skills--expanded');
-    });
-  }
 }
 
 // Make mobile navigation work
@@ -44,9 +36,26 @@ if (btnNavEl && headerEl) {
   });
 }
 
+if (headerEl) {
+  const syncHeaderScrollState = function () {
+    headerEl.classList.toggle('header--scrolled', window.scrollY > 12);
+  };
+
+  syncHeaderScrollState();
+  window.addEventListener('scroll', syncHeaderScrollState, { passive: true });
+}
+
 // Toggle close when click link on mobile navigation
 // Apply smooth scrolling to all browsers, especially Safari
 const allLinks = document.querySelectorAll('a[href]');
+const desktopFullPanelQuery = window.matchMedia('(min-width: 56.3125em)');
+const desktopExactTopSections = [
+  '#about',
+  '#experience',
+  '#projects',
+  '#certifications',
+  '#contact',
+];
 
 allLinks.forEach(function (link) {
   link.addEventListener('click', function (e) {
@@ -67,7 +76,21 @@ allLinks.forEach(function (link) {
     if (href !== '#' && href.startsWith('#')) {
       e.preventDefault();
       const sectionEl = document.querySelector(href);
-      sectionEl?.scrollIntoView({ behavior: 'smooth' });
+
+      if (!sectionEl) return;
+
+      const shouldUseExactTopScroll =
+        desktopFullPanelQuery.matches && desktopExactTopSections.includes(href);
+
+      if (shouldUseExactTopScroll) {
+        const sectionTop = sectionEl.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'smooth',
+        });
+      } else {
+        sectionEl.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     // close mobile navigation

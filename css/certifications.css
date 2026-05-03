@@ -12,6 +12,12 @@
   --color-primary-700: #542f1b;
   --color-surface: rgba(255, 248, 242, 0.84);
   --color-border: rgba(112, 68, 42, 0.14);
+  --bubble-fill: rgba(255, 250, 246, 0.38);
+  --bubble-shade: rgba(198, 151, 114, 0.34);
+  --bubble-glow: rgba(221, 193, 163, 0.28);
+  --bubble-ring: rgba(139, 90, 60, 0.16);
+  --bubble-opacity: 0.66;
+  --bubble-blur: 5px;
   --shadow-soft: 0 2rem 5rem rgba(54, 32, 20, 0.09);
   --shadow-card: 0 2.4rem 5rem rgba(48, 28, 18, 0.12);
 }
@@ -37,6 +43,149 @@ body {
     linear-gradient(180deg, #f9f3ee 0%, #f5ece4 48%, #efe2d6 100%);
 }
 
+.ambient-bubbles {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-bubbles span {
+  position: absolute;
+  bottom: -22rem;
+  display: block;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.7), transparent 32%),
+    radial-gradient(circle at 68% 72%, var(--bubble-shade), transparent 62%),
+    radial-gradient(circle at center, var(--bubble-fill), var(--bubble-glow));
+  border: 1px solid var(--bubble-ring);
+  box-shadow:
+    inset 0 0 4.2rem rgba(255, 255, 255, 0.16),
+    0 2rem 5.6rem rgba(84, 47, 27, 0.12);
+  opacity: var(--bubble-opacity);
+  filter: blur(var(--bubble-blur));
+  animation:
+    bubbleRise 24s linear infinite,
+    bubbleSway 7.5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.ambient-bubbles span::before,
+.ambient-bubbles span::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ambient-bubbles span::before {
+  inset: 14%;
+  border: 1px solid rgba(139, 90, 60, 0.12);
+}
+
+.ambient-bubbles span::after {
+  width: 18%;
+  height: 18%;
+  top: 20%;
+  left: 22%;
+  background: rgba(255, 255, 255, 0.38);
+  filter: blur(7px);
+}
+
+.ambient-bubbles span:nth-child(1) {
+  left: 5%;
+  width: 24rem;
+  height: 24rem;
+  animation-duration: 23s, 8.5s;
+  animation-delay: -4s, -1.2s;
+}
+
+.ambient-bubbles span:nth-child(2) {
+  left: 18%;
+  width: 12rem;
+  height: 12rem;
+  animation-duration: 18s, 6.5s;
+  animation-delay: -13s, -2s;
+  opacity: 0.32;
+}
+
+.ambient-bubbles span:nth-child(3) {
+  left: 31%;
+  width: 17rem;
+  height: 17rem;
+  animation-duration: 26s, 7.8s;
+  animation-delay: -8s, -3.4s;
+}
+
+.ambient-bubbles span:nth-child(4) {
+  left: 46%;
+  width: 10rem;
+  height: 10rem;
+  animation-duration: 20s, 6.2s;
+  animation-delay: -2s, -1.7s;
+  opacity: 0.28;
+}
+
+.ambient-bubbles span:nth-child(5) {
+  left: 58%;
+  width: 20rem;
+  height: 20rem;
+  animation-duration: 27s, 8.8s;
+  animation-delay: -15s, -4.1s;
+}
+
+.ambient-bubbles span:nth-child(6) {
+  left: 71%;
+  width: 14rem;
+  height: 14rem;
+  animation-duration: 21s, 7s;
+  animation-delay: -6s, -2.8s;
+}
+
+.ambient-bubbles span:nth-child(7) {
+  left: 82%;
+  width: 26rem;
+  height: 26rem;
+  animation-duration: 29s, 9.6s;
+  animation-delay: -19s, -5s;
+  opacity: 0.36;
+}
+
+.ambient-bubbles span:nth-child(8) {
+  left: 91%;
+  width: 9rem;
+  height: 9rem;
+  animation-duration: 17s, 5.8s;
+  animation-delay: -10s, -1.4s;
+  opacity: 0.24;
+}
+
+@keyframes bubbleRise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.9);
+  }
+
+  12% {
+    opacity: 0.72;
+  }
+
+  100% {
+    transform: translate3d(0, -125vh, 0) scale(1.08);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleSway {
+  0% {
+    margin-left: -1.8rem;
+  }
+
+  100% {
+    margin-left: 2.4rem;
+  }
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -44,6 +193,12 @@ img {
 
 a {
   color: inherit;
+}
+
+.cert-shell,
+.cert-page {
+  position: relative;
+  z-index: 1;
 }
 
 .cert-shell {
@@ -136,6 +291,27 @@ a {
   font-weight: 700;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease,
     color 0.3s ease;
+}
+
+@media (max-width: 69em) {
+  .ambient-bubbles span:nth-child(7),
+  .ambient-bubbles span:nth-child(8) {
+    display: none;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .ambient-bubbles span {
+    opacity: 0.44;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-bubbles span {
+    animation: none;
+    opacity: 0.24;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .cert-link:hover,
@@ -455,6 +631,9 @@ a.cert-name:active {
   }
 
   .cert-header {
+    flex-wrap: nowrap;
+    top: 1rem;
+    gap: 1rem;
     border-radius: 3rem;
     padding: 1.4rem;
   }
@@ -462,12 +641,22 @@ a.cert-name:active {
   .cert-header-actions {
     width: auto;
     justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+  }
+
+  .cert-brand-title {
+    font-size: 2.4rem;
   }
 
   .cert-link,
   .cert-link:link,
   .cert-link:visited {
     flex: 1 1 18rem;
+  }
+
+  .cert-page {
+    padding: 3.2rem 0 6rem;
   }
 
   .cert-hero-copy,
@@ -553,32 +742,59 @@ a.cert-name:active {
     font-size: 56.25%;
   }
 
+  .cert-shell,
+  .cert-page {
+    width: min(100%, calc(100% - 1.2rem));
+  }
+
   .cert-header {
+    top: 0.6rem;
     margin-top: 1rem;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border-radius: 2.4rem;
   }
 
   .cert-brand-copy {
     display: none;
   }
 
+  .cert-brand-mark {
+    width: 4.2rem;
+    height: 4.2rem;
+    font-size: 1.2rem;
+  }
+
   .cert-brand:link,
   .cert-brand:visited {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
+    min-width: 0;
   }
 
   .cert-header-actions {
     margin-left: 0;
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-end;
+    gap: 0.6rem;
   }
 
   .cert-page {
-    padding-top: 4rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
   }
 
   .cert-title {
     font-size: 4.8rem;
+  }
+
+  .cert-table-card {
+    padding: 1.4rem;
+    border-radius: 2rem;
+  }
+
+  .cert-table tbody {
+    padding: 0.4rem;
   }
 
   .cert-table-title {
@@ -600,5 +816,21 @@ a.cert-name:active {
   .cert-table td {
     grid-template-columns: 1fr;
     gap: 0.4rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .cert-shell,
+  .cert-page {
+    width: calc(100% - 0.8rem);
+  }
+
+  .cert-header {
+    padding: 0.9rem 1rem;
+  }
+
+  .cert-brand-mark {
+    width: 3.8rem;
+    height: 3.8rem;
   }
 }

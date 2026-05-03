@@ -129,6 +129,12 @@ html[data-theme='dark'] {
   --color-surface: rgba(31, 21, 16, 0.86);
   --color-surface-strong: rgba(41, 28, 22, 0.94);
   --color-border: rgba(240, 210, 184, 0.14);
+  --bubble-fill: rgba(240, 210, 184, 0.12);
+  --bubble-shade: rgba(180, 122, 84, 0.16);
+  --bubble-glow: rgba(75, 51, 39, 0.24);
+  --bubble-ring: rgba(255, 244, 232, 0.14);
+  --bubble-opacity: 0.58;
+  --bubble-blur: 7px;
   --shadow-soft: 0 2rem 5rem rgba(0, 0, 0, 0.28);
   --shadow-card: 0 1.6rem 4rem rgba(0, 0, 0, 0.34);
 }
@@ -153,6 +159,11 @@ html[data-theme='dark'] .cert-header {
   background: rgba(22, 15, 11, 0.82);
   border-color: rgba(240, 210, 184, 0.12);
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.24);
+}
+
+html[data-theme='dark'] .header.header--scrolled {
+  background: rgba(22, 15, 11, 0.68);
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.3);
 }
 
 html[data-theme='dark'] .main-nav {
@@ -227,8 +238,6 @@ html[data-theme='dark'] .theme-toggle__icon--moon {
 
 html[data-theme='dark'] .btn--full:link,
 html[data-theme='dark'] .btn--full:visited,
-html[data-theme='dark'] .main-nav-link--cta:link,
-html[data-theme='dark'] .main-nav-link--cta:visited,
 html[data-theme='dark'] .cert-link--primary:link,
 html[data-theme='dark'] .cert-link--primary:visited {
   background: linear-gradient(135deg, #b47a54, #875337);
@@ -337,15 +346,6 @@ html[data-theme='dark'] .cert-table tbody tr:nth-child(even) {
 html[data-theme='dark'] .cert-preview-table tbody tr:hover,
 html[data-theme='dark'] .cert-table tbody tr:hover {
   background: rgba(69, 48, 36, 0.58);
-}
-
-html[data-theme='dark'] .about-skills-fade {
-  background: linear-gradient(
-    180deg,
-    rgba(20, 14, 10, 0) 0%,
-    rgba(20, 14, 10, 0.86) 42%,
-    rgba(20, 14, 10, 0.99) 100%
-  );
 }
 
 html[data-theme='dark'] .cert-preview-fade {

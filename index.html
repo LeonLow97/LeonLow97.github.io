@@ -35,6 +35,17 @@
   </head>
 
   <body>
+    <div class="ambient-bubbles" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <header class="header">
       <a href="#" class="brand-mark" aria-label="Low Jie Wei home">
         <span class="brand-monogram">LJW</span>
@@ -52,9 +63,7 @@
             <a class="main-nav-link" href="#certifications">Certifications</a>
           </li>
           <li>
-            <a class="main-nav-link main-nav-link--cta" href="#contact"
-              >Contact</a
-            >
+            <a class="main-nav-link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -149,11 +158,15 @@
           <div class="about-text-box">
             <div class="about-panel">
               <p class="about-description">
-                I’m Leon Low Jie Wei. I am a Senior Software Engineer
-                at Shopee, where I build distributed systems involving
-                concurrency, microservices, and large-scale project ownership. I
-                enjoy solving hard engineering problems with clear systems
-                thinking and strong end-to-end ownership.
+                I’m Leon Low Jie Wei, a Senior Backend Software Engineer at
+                Shopee. I work on distributed systems, backend performance, and
+                production reliability, with a strong focus on building systems
+                that scale well under high traffic. Before Shopee, I was at
+                Thunes, where I worked across backend and platform engineering
+                to improve service performance and deliver business critical
+                features. I enjoy owning problems end to end and building
+                practical solutions that make systems faster, more stable, and
+                easier to operate.
               </p>
             </div>
 
@@ -314,27 +327,18 @@
                   <li class="about-skills-list--item">
                     <img
                       class="skills-img grafana"
-                      src="./img/languages/grafana.svg"
+                      src="./img/languages/grafana.png"
                       alt="Grafana logo"
                     /><span>Grafana</span>
                   </li>
                   <li class="about-skills-list--item">
                     <img
                       class="skills-img prometheus"
-                      src="./img/languages/prometheus.svg"
+                      src="./img/languages/prometheus.png"
                       alt="Prometheus logo"
                     /><span>Prometheus</span>
                   </li>
                   </ul>
-
-                  <div class="about-skills-fade">
-                    <p class="about-skills-fade-note">
-                      More skills continue below.
-                    </p>
-                    <button class="about-skills-more btn btn--full" type="button">
-                      See More
-                    </button>
-                  </div>
                 </div>
               </div>
 
@@ -529,7 +533,7 @@
                       alt="Sembcorp logo"
                     />
                   </h2>
-                  <p class="experience-role">Technology Analyst</p>
+                  <p class="experience-role">Data Analyst</p>
                 </div>
                 <p class="experience-duration">Jan 2021 - Jun 2021</p>
               </div>
@@ -865,8 +869,7 @@
               <label for="message">Message</label>
               <textarea
                 id="message"
-                rows="6"
-                style="resize: none"
+                rows="5"
                 placeholder="Write your message here"
                 required
               ></textarea>

@@ -127,8 +127,46 @@ body {
     font-size: 56.25%;
   }
 
+  body {
+    padding: 1.4rem 1rem 2.4rem;
+  }
+
+  .project-toolbar {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .theme-toggle {
+    align-self: flex-end;
+  }
+
+  .project-back:link,
+  .project-back:visited {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
   .project-card {
     padding: 3rem 2.2rem;
     border-radius: 2.4rem;
+  }
+
+  .project-label {
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 25em) {
+  body {
+    padding: 1rem 0.8rem 2rem;
+  }
+
+  .project-card {
+    padding: 2.2rem 1.6rem;
+  }
+
+  .project-title {
+    font-size: 3.6rem;
   }
 }
