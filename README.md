@@ -1,3 +1,3 @@
 # Website Link
 
-- [Portfolio Website](https://leonlow97.github.io/)
+<a href="https://leonlow97.github.io/" target="_blank">My Portfolio Website</a>
