@@ -1,13 +1,13 @@
 :root {
   --font-body: 'Plus Jakarta Sans', sans-serif;
-  --font-heading: 'Cormorant Garamond', serif;
-  --color-text: #38261b;
-  --color-text-soft: #776354;
-  --color-heading: #24150d;
-  --color-primary-100: #efe1d2;
-  --color-primary-500: #8b5a3c;
-  --color-primary-700: #542f1b;
-  --color-border: rgba(112, 68, 42, 0.14);
+  --font-heading: 'Oxanium', sans-serif;
+  --color-text: #14213d;
+  --color-text-soft: #475569;
+  --color-heading: #0b1220;
+  --color-primary-100: #ddf3ef;
+  --color-primary-500: #0f766e;
+  --color-primary-700: #0a4b46;
+  --color-border: rgba(20, 33, 61, 0.14);
 }
 
 * {
@@ -26,8 +26,8 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background:
-    radial-gradient(circle at top left, rgba(198, 151, 114, 0.32), transparent 32%),
-    linear-gradient(180deg, #f9f3ee 0%, #f1e6db 100%);
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 32%),
+    linear-gradient(180deg, #f8fafc 0%, #eaf3f4 100%);
 }
 
 .project-page {
@@ -40,7 +40,7 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 3.2rem;
   padding: clamp(2.4rem, 5vw, 4rem);
-  box-shadow: 0 2rem 5rem rgba(54, 32, 20, 0.12);
+  box-shadow: 0 2rem 5rem rgba(15, 23, 42, 0.12);
 }
 
 .project-toolbar {
@@ -73,8 +73,8 @@ body {
   margin-bottom: 1.6rem;
   padding: 0.8rem 1.2rem;
   border-radius: 999px;
-  background: var(--color-primary-100);
-  color: var(--color-primary-700);
+  background: rgba(var(--color-accent-rgb), 0.12);
+  color: var(--color-accent-text);
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -100,7 +100,7 @@ body {
   margin: 0 0 2.8rem;
   padding: 1.6rem 1.8rem;
   border-radius: 1.8rem;
-  background: rgba(239, 225, 210, 0.7);
+  background: rgba(221, 243, 239, 0.7);
   color: var(--color-primary-700);
   font-size: 1.6rem;
   font-weight: 600;

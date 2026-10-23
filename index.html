@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&amp;family=Pixelify+Sans:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     />
 
@@ -24,37 +24,27 @@
     <script defer src="js/script.js"></script>
     <script defer src="js/certifications.js"></script>
 
-    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+    <link rel="icon" type="image/png" href="img/favicon.png?v=mushroom" />
 
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
     <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/world.css" />
 
     <title>Low Jie Wei</title>
   </head>
 
   <body>
-    <div class="ambient-bubbles" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
     <header class="header">
       <a href="#" class="brand-mark" aria-label="Low Jie Wei home">
-        <span class="brand-monogram">LJW</span>
+        <img class="brand-avatar" src="img/world/avatar-nav.webp" width="144" height="200" alt="" />
         <span class="brand-text">
           <span class="brand-name">Low Jie Wei</span>
         </span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-navigation">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#about">About</a></li>
           <li><a class="main-nav-link" href="#experience">Experience</a></li>
@@ -88,39 +78,57 @@
           class="btn-mobile-nav"
           type="button"
           aria-label="Toggle navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
         >
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+          <svg class="icon-mobile-nav icon-mobile-nav--menu" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="icon-mobile-nav icon-mobile-nav--close" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 5l14 14M19 5 5 19" />
+          </svg>
         </button>
       </div>
     </header>
 
     <main>
       <section class="section-home">
-        <div class="hero-aurora" aria-hidden="true"></div>
+        <img
+          class="world-mob world-mob--mushroom"
+          src="img/world/mobs/mushroom.webp"
+          alt=""
+          width="1254"
+          height="1254"
+          decoding="async"
+        />
         <div class="home">
           <div class="home-text">
-            <h1 class="heading-primary home-title">Leon Low Jie Wei</h1>
             <span class="home-eyebrow">Senior Backend Software Engineer at Shopee</span>
+            <h1 class="heading-primary home-title">
+              <span class="home-title-line">Leon Low</span>
+              <span class="home-title-line">Jie Wei</span>
+            </h1>
             <p class="home-description">
-              Building large-scale <strong>distributed systems</strong> with
-              <strong>high concurrency</strong>, backend and database
-              <strong>performance optimization</strong>, and
-              <strong>sole ownership</strong> of Shopee's Database Metadata
-              Service.
+              I build distributed systems for high traffic products, with a
+              focus on backend performance and reliability. At Shopee, I own
+              the Database Metadata Service.
+            </p>
+            <p class="home-education">
+              M.S. in Computer Science (in progress) · Georgia Tech
             </p>
 
             <div class="home-actions">
+              <a href="#projects" class="btn btn--full">View projects</a>
               <a
                 href="http://www.linkedin.com/in/lowjiewei"
-                class="btn btn--full"
+                class="home-social-link"
                 target="_blank"
                 rel="noopener"
                 >LinkedIn</a
               >
               <a
                 href="https://github.com/LeonLow97"
-                class="btn btn--outline"
+                class="home-social-link"
                 target="_blank"
                 rel="noopener"
                 >GitHub</a
@@ -128,67 +136,88 @@
             </div>
           </div>
 
-          <div class="home-img-box">
-            <div class="home-photo-shell">
-              <img
-                src="img/me/me_japan.png"
-                alt="Photo of Low Jie Wei"
-                class="home-img"
-              />
+          <div class="home-avatar-box">
+            <div class="home-avatar-shell">
+              <p class="home-avatar-speech" data-avatar-speech>Hi there, I'm Leon!</p>
+              <button class="home-avatar-button" type="button" aria-label="Make Leon blink" data-avatar-button>
+                <img
+                  src="img/world/avatar.png"
+                  alt=""
+                  class="home-avatar"
+                  data-avatar
+                  width="1254"
+                  height="1254"
+                  fetchpriority="high"
+                  draggable="false"
+                />
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       <section id="about" class="section-about">
-        <div class="about-container container text-center">
+        <div class="about-container container text-center mob-heading">
           <span class="subheading">Get To Know More</span>
           <h2 class="heading-secondary">About Me</h2>
+          <img
+            class="world-mob world-mob--snail"
+            src="img/world/mobs/blue-snail.webp"
+            alt=""
+            width="1254"
+            height="1254"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div class="about grid grid--3-cols">
           <div class="about-img-box">
             <img
-              src="img/me/me_melbourne.jpg"
+              src="img/me/me_melbourne.webp"
               alt="Photo of Low Jie Wei"
               class="about-img"
+              width="800"
+              height="1200"
+              loading="lazy"
             />
           </div>
 
           <div class="about-text-box">
             <div class="about-panel">
               <p class="about-description">
-                I’m Leon Low Jie Wei, a Senior Backend Software Engineer at
-                Shopee. I work on distributed systems, backend performance, and
-                production reliability, with a strong focus on building systems
-                that scale well under high traffic. Before Shopee, I was at
-                Thunes, where I worked across backend and platform engineering
-                to improve service performance and deliver business critical
-                features. I enjoy owning problems end to end and building
-                practical solutions that make systems faster, more stable, and
-                easier to operate.
+                I’m a Senior Backend Software Engineer at Shopee, where I work
+                on distributed systems, backend performance, and production
+                reliability. I own Shopee's Database Metadata Service and enjoy
+                solving problems end to end. Previously at Thunes, I worked
+                across backend and platform engineering to improve service
+                performance and deliver business-critical features. I’m
+                currently pursuing a Master’s in Computer Science at Georgia
+                Tech.
               </p>
             </div>
 
             <nav class="about-nav about-panel">
               <ul class="about-nav-list">
                 <li>
-                  <a
-                    class="about-nav-link about-nav-link-skills"
-                    href="javascript:void(0)"
-                    >Skills</a
-                  >
+                  <button
+                    class="about-nav-link about-nav-link-skills active"
+                    type="button"
+                    aria-controls="about-skills"
+                    aria-expanded="true"
+                  >Skills</button>
                 </li>
                 <li>
-                  <a
+                  <button
                     class="about-nav-link about-nav-link-education"
-                    href="javascript:void(0)"
-                    >Education</a
-                  >
+                    type="button"
+                    aria-controls="about-education"
+                    aria-expanded="false"
+                  >Education</button>
                 </li>
               </ul>
 
-              <div class="about-nav-skills">
+              <div class="about-nav-skills open" id="about-skills">
                 <div class="about-skills-preview">
                   <ul class="about-skills-list">
                   <li class="about-skills-list--item">
@@ -342,8 +371,15 @@
                 </div>
               </div>
 
-              <div class="about-nav-education">
+              <div class="about-nav-education" id="about-education">
                 <ul class="about-education-list">
+                  <li>
+                    <ion-icon
+                      class="academic-icon"
+                      name="school-outline"
+                    ></ion-icon
+                    >Georgia Tech — M.S. in Computer Science (in progress)
+                  </li>
                   <li>
                     <ion-icon
                       class="academic-icon"
@@ -380,13 +416,22 @@
       </section>
 
       <section id="experience" class="section-experience">
-        <div class="container container-headings text-center">
+        <div class="container container-headings text-center mob-heading">
           <span class="subheading">Professional Journey</span>
           <h2 class="heading-secondary">Work Experience</h2>
           <p class="section-copy">
-            A mix of backend, platform, and fullstack roles focused on
-            reliability, maintainability, and real delivery outcomes.
+            Backend, platform, and fullstack roles delivering measurable gains
+            in scale, performance, and reliability.
           </p>
+          <img
+            class="world-mob world-mob--stump world-mob--left"
+            src="img/world/mobs/stump.webp"
+            alt=""
+            width="1254"
+            height="1254"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div class="experience-timeline">
@@ -403,7 +448,7 @@
                       alt="Shopee logo"
                     />
                   </h2>
-                  <p class="experience-role">Senior Software Engineer</p>
+                  <p class="experience-role">Senior Software Engineer (Backend &amp; Platform)</p>
                 </div>
                 <p class="experience-duration">Aug 2025 - Present</p>
               </div>
@@ -416,12 +461,36 @@
 
               <ul class="experience-list">
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Highlights for this role will be added soon.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Led 3 engineers migrating the SEA Database Metadata Service for Shopee, Garena, and SeaMoney to Go/gRPC; dual writes ensured integrity with zero data loss.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Scaled sync across 100K+ clusters from 1.5 days to under 1 hour through worker concurrency, schema tuning, and N+1 query removal.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Reduced service memory from 32 GB to under 1 GB, database CPU from 100% to under 10%, and Redis use from 100% to 20% across 150+ Kubernetes pods through concurrency, locking, query, and cache optimizations.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Cut GitLab CI time 75% (40 to 10 minutes) by reusing build artifacts and removing duplicate builds.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built reliable, idempotent Go/Kafka/Redis sync services across 20+ availability zones; handled database, Kubernetes, and bare-metal incidents.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built a Kubernetes CR/operator for image rollouts with lease control, abort/rollback, MySQL state, and stale-workflow cleanup.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built an AI troubleshooting agent linking chat, Claude, GitLab Skills, and MCP access to Grafana, logs, and internal tools; designed prompts and tool routing for 200+ engineers.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Earned 2 SEA Outstanding Performance Awards.
                 </li>
               </ul>
             </div>
@@ -453,12 +522,24 @@
 
               <ul class="experience-list">
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Highlights for this role will be added soon.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Architected Go, Vue, and PostgreSQL microservices on AWS and Kubernetes for a global, high-volume payments platform.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built Business Hub for live FX, batch transfers, tracking, and expected volume/currency forecasts—helping Treasury pre-position liquidity, reduce payout waits, and improve FX margins.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built Network Discovery to show clients and Sales active payment networks, improving visibility and accelerating pitches.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built internal tools to configure global partners, payers, and routing; cut bulk setup and updates from 5 minutes to under 10 seconds.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Automated hundreds of thousands of payment routes in seconds, replacing week-long work and cutting onboarding time by 5–10%.
                 </li>
               </ul>
             </div>
@@ -490,31 +571,28 @@
 
               <ul class="experience-list">
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Built a reusable MFA module across backend and frontend with
-                  C#, .NET Framework, and WCF for future internal projects.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built monolithic apps with JavaScript, C#, ASP.NET, and MSSQL using GitLab and Sourcetree.
                 </li>
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Integrated SAML 2.0 authentication flows with ADFS for secure
-                  identity provider and service provider access.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Integrated reusable MFA across 4 production apps and SAML 2.0 between identity and service providers.
                 </li>
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Delivered 10 bug fixes and 2 feature releases cleanly through
-                  UAT and Production.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Configured trusted-CA SSL/TLS for HTTPS on IIS across 4 production servers.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Built a task management system with React, Svelte, Node.js, Go, and MySQL.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Led 6 developers as Scrum Master, facilitating sprint ceremonies.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Set up GitLab and Docker CI/CD to automate builds, tests, and deployments.
                 </li>
               </ul>
             </div>
@@ -546,33 +624,24 @@
 
               <ul class="experience-list">
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Led an industrial plant analysis project with MATLAB,
-                  extracting and studying three months of Excel-based production
-                  data.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Analyzed 3 months of Excel plant data with MATLAB to assess production rates.
                 </li>
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Used Python Pandas to improve processing performance by
-                  almost 90%.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Used Python Pandas and Matplotlib to improve project performance by nearly 90%.
                 </li>
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Presented research on sustainable technologies and was
-                  recognized by the Group CEO for identifying potential business
-                  opportunities.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Researched 7 sustainable technologies and presented findings to the department in PowerPoint.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Recognized by the Group CEO for identifying business opportunities in a technology report.
+                </li>
+                <li class="experience-list-item">
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Coordinated administrative work for 6 interns.
                 </li>
               </ul>
             </div>
@@ -599,22 +668,12 @@
 
               <ul class="experience-list">
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Mentored Junior College and Secondary School students in H2
-                  Math, A Math, E Math, and Chemistry.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Tutored secondary and junior college students in math and chemistry.
                 </li>
                 <li class="experience-list-item">
-                  <span
-                    ><ion-icon
-                      name="checkmark-circle-outline"
-                      class="experience-list-check"
-                    ></ion-icon></span
-                  >Strengthened foundational understanding and helped students
-                  improve from failing grades to A and B outcomes.
+                  <img class="experience-list-leaf" src="./img/world/maple-leaf.png" alt="" />
+                  Helped students improve from failing grades to A/B results.
                 </li>
               </ul>
             </div>
@@ -623,17 +682,30 @@
       </section>
 
       <section id="projects" class="section-projects">
-        <div class="container-headings text-center container">
+        <div class="container-headings text-center container mob-heading">
           <span class="subheading">Crafting Systems</span>
-          <h2 class="heading-secondary">Featured Projects</h2>
+          <h2 class="heading-secondary">Projects</h2>
           <p class="section-copy">
-            Selected GitHub builds across backend systems, data engineering,
+            GitHub builds across backend systems, data engineering,
             automation, Kubernetes, and machine learning.
           </p>
+          <img
+            class="world-mob world-mob--pig"
+            src="img/world/mobs/pig.webp"
+            alt=""
+            width="1374"
+            height="1145"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
-        <div class="projects container grid grid--3-cols">
-          <article class="project">
+        <div class="projects-carousel container" aria-label="Projects">
+          <button class="projects-carousel__arrow" type="button" data-project-direction="previous" aria-label="Previous project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" /></svg>
+          </button>
+          <div class="projects grid grid--3-cols projects-carousel__stage">
+          <article class="project project--lead">
             <span class="project-kicker">Data Engineering</span>
             <h3 class="project-title">Common Crawl Deduplication Pipeline</h3>
             <div class="project-skills">
@@ -794,13 +866,30 @@
               >View Project</a
             >
           </article>
+          </div>
+          <button class="projects-carousel__arrow" type="button" data-project-direction="next" aria-label="Next project">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+          </button>
+          <div class="projects-carousel__pagination" data-project-pagination role="group" aria-label="Choose project">
+          </div>
+          <p class="sr-only" data-project-status aria-live="polite"></p>
         </div>
+
       </section>
 
       <section id="certifications" class="section-certifications">
-        <div class="container-headings text-center container">
+        <div class="container-headings text-center container mob-heading">
           <span class="subheading">Continuous Learning</span>
           <h2 class="heading-secondary">Certifications</h2>
+          <img
+            class="world-mob world-mob--slime world-mob--left"
+            src="img/world/mobs/slime.webp"
+            alt=""
+            width="1254"
+            height="1254"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div class="cert-preview-shell container">
@@ -832,13 +921,22 @@
       </section>
 
       <section id="contact" class="section-contact">
-        <div class="container-headings text-center container">
+        <div class="container-headings text-center container mob-heading">
           <span class="subheading">Let's Connect</span>
           <h2 class="heading-secondary">Contact</h2>
           <p class="section-copy">
             For engineering, collaboration, or opportunities, feel free to reach
-            out.
+            out. The form opens a draft in your email app.
           </p>
+          <img
+            class="world-mob world-mob--pink-bean"
+            src="img/world/mobs/pink-bean.webp"
+            alt=""
+            width="1254"
+            height="1254"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div class="contact-container container grid grid--2-cols">
@@ -875,7 +973,7 @@
               ></textarea>
             </div>
 
-            <button class="btn btn--form" type="submit">Send Message</button>
+            <button class="btn btn--form" type="submit">Open Email Draft</button>
           </form>
 
           <div class="contact-sidebar">

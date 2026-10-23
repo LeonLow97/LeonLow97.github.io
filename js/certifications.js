@@ -318,7 +318,7 @@ const certifications = [
   },
 ];
 
-function certificationRowMarkup(entry) {
+function renderCertificationRow(entry) {
   const focusMarkup = entry.focus
     .map(
       (item) =>
@@ -328,12 +328,12 @@ function certificationRowMarkup(entry) {
   const certificationMarkup = entry.link
     ? `<a class="cert-name" href="${entry.link}" target="_blank" rel="noopener">${entry.certification}</a>`
     : `<span class="cert-name">${entry.certification}</span>`;
-  const rowAttrs = entry.link
-    ? ` class="cert-row-link" data-href="${entry.link}"`
+  const rowAttributes = entry.link
+    ? ` class="cert-row-link" data-href="${entry.link}" tabindex="0" aria-label="Open certification in new tab"`
     : '';
 
   return `
-    <tr${rowAttrs}>
+    <tr${rowAttributes}>
       <td class="cert-date" data-label="Completed">${entry.completed}</td>
       <td data-label="Provider"><span class="cert-provider">${entry.provider}</span></td>
       <td data-label="Certification">${certificationMarkup}</td>
@@ -343,39 +343,51 @@ function certificationRowMarkup(entry) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const tableBodies = document.querySelectorAll('[data-certifications-body]');
-  tableBodies.forEach((body) => {
-    const limitValue = body.getAttribute('data-cert-limit');
-    const limit = limitValue ? Number.parseInt(limitValue, 10) : certifications.length;
-    const rows = certifications.slice(0, Number.isNaN(limit) ? certifications.length : limit);
+  const certificationTableBodies = document.querySelectorAll('[data-certifications-body]');
+  certificationTableBodies.forEach((tableBody) => {
+    const limitAttribute = tableBody.getAttribute('data-cert-limit');
+    const rowLimit = limitAttribute
+      ? Number.parseInt(limitAttribute, 10)
+      : certifications.length;
+    const visibleCertifications = certifications.slice(
+      0,
+      Number.isNaN(rowLimit) ? certifications.length : rowLimit
+    );
 
-    body.innerHTML = rows.map(certificationRowMarkup).join('');
+    tableBody.innerHTML = visibleCertifications.map(renderCertificationRow).join('');
   });
 
   document.querySelectorAll('.cert-row-link').forEach((row) => {
+    const openCertification = () => {
+      const destination = row.getAttribute('data-href');
+      if (!destination) return;
+
+      window.open(destination, '_blank', 'noopener');
+    };
+
     row.addEventListener('click', (event) => {
       const target = event.target;
       if (target instanceof HTMLElement && target.closest('a')) return;
 
-      const href = row.getAttribute('data-href');
-      if (!href) return;
+      openCertification();
+    });
 
-      window.open(href, '_blank', 'noopener');
+    row.addEventListener('keydown', (event) => {
+      if (event.target !== row || !['Enter', ' '].includes(event.key)) return;
+      event.preventDefault();
+      openCertification();
     });
   });
 
-  const totals = document.querySelectorAll('[data-cert-total]');
-  totals.forEach((node) => {
+  document.querySelectorAll('[data-cert-total]').forEach((node) => {
     node.textContent = certifications.length.toString();
   });
 
-  const latest = document.querySelectorAll('[data-cert-latest]');
-  latest.forEach((node) => {
+  document.querySelectorAll('[data-cert-latest]').forEach((node) => {
     node.textContent = certifications[0]?.completed ?? '';
   });
 
-  const sourceLinks = document.querySelectorAll('[data-cert-source]');
-  sourceLinks.forEach((node) => {
+  document.querySelectorAll('[data-cert-source]').forEach((node) => {
     node.setAttribute('href', certificationSourceUrl);
   });
 });

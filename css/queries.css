@@ -1,91 +1,7 @@
 /**************************/
-/* Desktop Full Panels */
-/**************************/
-@media (min-width: 56.3125em) {
-  .section-about,
-  .section-certifications {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-block: 6rem;
-    scroll-margin-top: 0;
-  }
-
-  .section-contact {
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-block: clamp(2.4rem, 3vh, 4rem);
-    scroll-margin-top: 0;
-  }
-
-  .section-experience,
-  .section-projects {
-    scroll-margin-top: 0;
-  }
-
-  .home {
-    align-items: center;
-  }
-
-  .section-contact .container-headings {
-    margin-bottom: clamp(1.8rem, 3vh, 3.2rem);
-  }
-
-  .contact-container {
-    padding: clamp(2rem, 2.6vh, 3rem);
-    gap: clamp(2rem, 2.6vw, 3.2rem);
-  }
-
-  .contact-form,
-  .contact-sidebar {
-    padding: clamp(0.2rem, 0.9vh, 1rem);
-  }
-
-  .contact-form {
-    gap: clamp(1.4rem, 1.8vh, 2rem);
-  }
-
-  .contact-form label {
-    margin-bottom: 0.8rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    padding: clamp(1.2rem, 1.6vh, 1.5rem) clamp(1.4rem, 1.8vw, 1.7rem);
-  }
-
-  .contact-form textarea {
-    height: clamp(11rem, 15vh, 16rem);
-    min-height: 0;
-    overflow-y: auto;
-  }
-
-  .contact-sidebar {
-    gap: clamp(1.6rem, 2vh, 2.4rem);
-  }
-
-  .contact-details {
-    gap: 1.2rem;
-  }
-
-  .contact-details div {
-    gap: 0.9rem;
-    padding: clamp(1.6rem, 2vh, 2.2rem);
-  }
-}
-
-/**************************/
 /* Below 1100px */
 /**************************/
 @media (max-width: 69em) {
-  .ambient-bubbles span:nth-child(7),
-  .ambient-bubbles span:nth-child(8) {
-    display: none;
-  }
-
   .home {
     grid-template-columns: 1fr;
     gap: 4rem;
@@ -108,12 +24,11 @@
     justify-content: center;
   }
 
-  .home-img-box {
-    order: -1;
-    margin-top: 1.2rem;
+  .home-avatar-box {
+    margin-top: 0;
   }
 
-  .home-photo-shell {
+  .home-avatar-shell {
     width: min(100%, 36rem);
   }
 
@@ -126,20 +41,12 @@
   .contact-container {
     gap: 2.4rem;
   }
-
-  .open .about-skills-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 /**************************/
 /* Below 900px */
 /**************************/
 @media (max-width: 56.25em) {
-  .ambient-bubbles span {
-    opacity: 0.44;
-  }
-
   html {
     font-size: 58%;
   }
@@ -173,11 +80,11 @@
     top: calc(100% + 1rem);
     left: 0;
     width: 100%;
-    background: rgba(255, 249, 244, 0.96);
-    border: 1px solid rgba(112, 68, 42, 0.12);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(20, 33, 61, 0.12);
     border-radius: 2.8rem;
     padding: 1.4rem;
-    box-shadow: 0 2rem 4rem rgba(54, 32, 20, 0.14);
+    box-shadow: 0 2rem 4rem rgba(15, 23, 42, 0.14);
     max-height: calc(100svh - 10rem);
     overflow-y: auto;
     transform: translateY(-1rem);
@@ -194,11 +101,11 @@
     transform: translateY(0);
   }
 
-  .nav-open .icon-mobile-nav[name='close-outline'] {
+  .nav-open .icon-mobile-nav--close {
     display: block;
   }
 
-  .nav-open .icon-mobile-nav[name='menu-outline'] {
+  .nav-open .icon-mobile-nav--menu {
     display: none;
   }
 
@@ -214,7 +121,7 @@
     justify-content: center;
     padding: 1.4rem;
     font-size: 1.7rem;
-    background-color: rgba(239, 225, 210, 0.48);
+    background-color: rgba(221, 243, 239, 0.48);
   }
 
   .grid--3-cols,
@@ -248,12 +155,11 @@
     min-width: 0;
   }
 
-  .home-img-box {
-    order: -1;
-    margin-top: 0.8rem;
+  .home-avatar-box {
+    margin-top: 0;
   }
 
-  .home-photo-shell {
+  .home-avatar-shell {
     width: min(100%, 34rem);
   }
 
@@ -274,21 +180,12 @@
     justify-content: center;
   }
 
-  .open .about-skills-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .experience-timeline::before {
-    left: 2.4rem;
+  .experience-timeline {
+    --timeline-line-x: 2.5rem;
   }
 
   .experience-checkpoint {
     padding-left: 6rem;
-  }
-
-  .experience-checkpoint::before {
-    left: 1.5rem;
-    top: 2.4rem;
   }
 
   .experience-period {
@@ -321,6 +218,15 @@
 
   .project-title {
     font-size: 2.9rem;
+  }
+
+  .project--lead {
+    display: flex;
+    padding: 3rem;
+  }
+
+  .project--lead .project-title {
+    font-size: 3.8rem;
   }
 
   .contact-sidebar {
@@ -366,16 +272,16 @@
   .cert-preview-table tbody tr {
     border-radius: 2rem;
     background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(112, 68, 42, 0.1);
+    border: 1px solid rgba(20, 33, 61, 0.1);
     padding: 1.2rem 1.4rem;
   }
 
   .cert-preview-table tbody tr:nth-child(even) {
-    background: rgba(247, 239, 232, 0.82);
+    background: rgba(234, 243, 244, 0.82);
   }
 
   .cert-preview-table tbody tr:hover {
-    background: rgba(239, 225, 210, 0.72);
+    background: rgba(221, 243, 239, 0.72);
   }
 
   .cert-preview-table td {
@@ -409,7 +315,7 @@
     width: calc(100% - 1.4rem);
     top: 1rem;
     padding: 1rem 1.2rem;
-    border-radius: 2.4rem;
+    border-radius: 1.4rem;
   }
 
   .brand-text {
@@ -420,8 +326,7 @@
     font-size: 2.5rem;
   }
 
-  .brand-monogram {
-    width: 4.6rem;
+  .brand-avatar {
     height: 4.6rem;
   }
 
@@ -466,6 +371,10 @@
     width: 100%;
   }
 
+  .home-social-link {
+    text-align: center;
+  }
+
   .about-panel,
   .project,
   .experience-card,
@@ -483,28 +392,19 @@
     flex-direction: column;
   }
 
-  .about-nav-link:link,
-  .about-nav-link:visited {
+  .about-nav-link {
     display: flex;
     justify-content: center;
   }
 
   .experience-timeline {
-    padding: 0 1.2rem;
-  }
-
-  .open .about-skills-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    --timeline-side-padding: 1.2rem;
   }
 
   .experience-company--name {
     font-size: 3rem;
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  .experience-company--image {
-    height: 2.2rem;
   }
 
   .experience-duration {
@@ -595,12 +495,8 @@
     padding-left: 4.8rem;
   }
 
-  .experience-timeline::before {
-    left: 1.8rem;
-  }
-
-  .experience-checkpoint::before {
-    left: 0.9rem;
+  .experience-timeline {
+    --timeline-line-x: 1.9rem;
   }
 
   .contact-form input,
@@ -610,9 +506,5 @@
 
   .contact-details div {
     padding: 1.6rem;
-  }
-
-  .open .about-skills-list {
-    grid-template-columns: 1fr;
   }
 }
